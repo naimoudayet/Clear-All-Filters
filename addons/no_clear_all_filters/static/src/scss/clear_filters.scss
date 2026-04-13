@@ -1,0 +1,35 @@
+// Copyright 2026 Naim OUDAYET
+// License OPL-1
+
+.o_no_clear_all_filters_btn {
+    // Match the search bar height (form-control uses ~calc(1.5em + .5rem + 2px))
+    // We use align-self + same padding pattern to stay vertically aligned
+    align-self: stretch;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 0 12px;
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        background-color: #dc3545;
+        color: #fff;
+        border-color: #dc3545;
+    }
+
+    .fa {
+        font-size: 0.8rem;
+    }
+
+    // On small screens: make button full width below search bar
+    @media (max-width: 767.98px) {
+        border-radius: 4px;
+        border-left: 1px solid #dc3545;
+        margin-top: 4px;
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+}

@@ -1,127 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #333; line-height: 1.6; }
-        .container { max-width: 896px; margin: 0 auto; padding: 0 20px; }
+<section style="max-width: 896px; margin: 0 auto;">
 
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #714B67 0%, #9B6A8F 100%);
-            color: #fff; padding: 60px 20px; text-align: center;
-        }
-        .hero h1 { font-size: 2.4em; margin-bottom: 12px; font-weight: 700; }
-        .hero p { font-size: 1.2em; opacity: 0.92; max-width: 640px; margin: 0 auto; }
-        .hero .badge { display: inline-block; background: rgba(255,255,255,0.18); border-radius: 20px; padding: 6px 18px; font-size: 0.85em; margin-bottom: 18px; letter-spacing: 0.5px; }
-
-        /* Problem */
-        .problem { padding: 48px 20px; background: #fff; }
-        .problem h2 { color: #714B67; font-size: 1.6em; margin-bottom: 16px; text-align: center; }
-        .problem p { max-width: 720px; margin: 0 auto; text-align: center; font-size: 1.05em; color: #555; }
-
-        /* Features */
-        .features { padding: 48px 20px; background: #f8f5f7; }
-        .features h2 { color: #714B67; font-size: 1.6em; margin-bottom: 32px; text-align: center; }
-        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 896px; margin: 0 auto; }
-        .feature-card {
-            background: #fff; border-radius: 10px; padding: 28px 24px;
-            border: 1px solid #e8e0e6; transition: box-shadow 0.2s;
-        }
-        .feature-card:hover { box-shadow: 0 4px 16px rgba(113,75,103,0.10); }
-        .feature-card .icon { color: #017E84; font-size: 1.8em; margin-bottom: 12px; }
-        .feature-card h3 { font-size: 1.1em; color: #714B67; margin-bottom: 8px; }
-        .feature-card p { font-size: 0.95em; color: #666; }
-
-        /* Technical */
-        .technical { padding: 48px 20px; background: #fff; }
-        .technical h2 { color: #714B67; font-size: 1.6em; margin-bottom: 24px; text-align: center; }
-        .tech-table { max-width: 600px; margin: 0 auto; border-collapse: collapse; width: 100%; }
-        .tech-table th, .tech-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #e8e0e6; }
-        .tech-table th { color: #714B67; font-weight: 600; width: 40%; background: #f8f5f7; }
-        .tech-table td { color: #555; }
-        .tech-table code { background: #f0ebee; padding: 2px 8px; border-radius: 4px; font-size: 0.9em; }
-
-        /* Footer */
-        .footer { padding: 32px 20px; background: #714B67; color: rgba(255,255,255,0.85); text-align: center; font-size: 0.95em; }
-        .footer strong { color: #fff; }
-
-        @media (max-width: 600px) {
-            .features-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 1.8em; }
-        }
-    </style>
-</head>
-<body>
-
-<!-- Hero -->
-<section class="hero">
-    <div class="container">
-        <div class="badge"><i class="fa fa-eraser"></i>&nbsp; Odoo 19 Module</div>
-        <h1>Clear All Filters Button</h1>
-        <p>One-click remove all active filters, group-bys, and favorites</p>
+    <!-- HERO -->
+    <div style="background-color: #714B67; color: #ffffff; padding: 60px 20px; text-align: center; border-radius: 0 0 8px 8px;">
+        <h1 style="font-size: 42px; font-weight: 700; color: #ffffff; margin: 0 0 8px;">Clear All Filters</h1>
+        <p style="font-size: 20px; color: #ffffff; margin: 0 0 6px;">One click to reset every filter, group-by, and favorite</p>
+        <p style="font-size: 15px; color: #e8dde5; margin: 0 0 20px;">5 clicks become 1. Works on every list and kanban view.</p>
+        <span style="display: inline-block; background-color: #5a3a50; border: 1px solid #8a6a80; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">Odoo 19</span>
+        <span style="display: inline-block; background-color: #017E84; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">FREE</span>
+        <span style="display: inline-block; background-color: #e6a817; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #333333; margin: 0 4px;">Zero Config</span>
     </div>
-</section>
 
-<!-- Problem -->
-<section class="problem">
-    <div class="container">
-        <h2><i class="fa fa-exclamation-circle"></i>&nbsp; The Problem</h2>
-        <p>After applying several filters, group-bys, and favorites in Odoo, clearing them requires clicking the "x" on each individual tag one by one. With complex search combinations this becomes tedious, especially for users who frequently switch between different views and filter sets throughout their workday.</p>
-    </div>
-</section>
+    <!-- THE PROBLEM -->
+    <div class="container py-5" style="text-align: center;">
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px;">The Problem</h2>
+        <p style="color: #666666; font-size: 16px; margin-bottom: 32px;">You've applied 5 filters and 2 group-bys. Now you want a clean view. That's 7 clicks on tiny X buttons.</p>
 
-<!-- Features -->
-<section class="features">
-    <div class="container">
-        <h2><i class="fa fa-th-large"></i>&nbsp; Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="icon"><i class="fa fa-times-circle"></i></div>
-                <h3>"Clear All" Button in Search Bar</h3>
-                <p>A single button added to the search bar area lets you wipe all active search facets in one click. No more clicking individual "x" icons one at a time.</p>
+        <div class="row">
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #f8d7da; border: 2px solid #f5c6cb; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
+                    <p style="font-size: 14px; font-weight: 600; color: #721c24; margin: 0 0 12px;">Standard Odoo</p>
+                    <div style="font-size: 14px; color: #721c24; margin-bottom: 12px;">
+                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Country = France <b>x</b></span>
+                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">State = Sale <b>x</b></span>
+                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Salesperson <b>x</b></span>
+                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">This Month <b>x</b></span>
+                    </div>
+                    <p style="font-size: 13px; color: #721c24; margin: 0;">Click X on each one. 4 filters = 4 clicks. Tedious.</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="icon"><i class="fa fa-filter"></i></div>
-                <h3>Removes Filters + Group-Bys + Favorites</h3>
-                <p>Clears everything at once: active filters, group-by groupings, and applied favorites. Returns the view to its clean, unfiltered default state.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon"><i class="fa fa-eye-slash"></i></div>
-                <h3>Only Appears When Needed</h3>
-                <p>The Clear All button is hidden when no filters are active, keeping the interface clean. It only appears when there are actual facets to remove.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon"><i class="fa fa-hand-pointer-o"></i></div>
-                <h3>Clean Icon Button</h3>
-                <p>Minimal, unobtrusive design using a clear icon that fits naturally into Odoo's search bar aesthetic. Does not clutter the interface or conflict with existing elements.</p>
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #d4edda; border: 2px solid #c3e6cb; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
+                    <p style="font-size: 14px; font-weight: 600; color: #155724; margin: 0 0 12px;">With This Module</p>
+                    <div style="font-size: 14px; color: #155724; margin-bottom: 12px;">
+                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Country = France</span>
+                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">State = Sale</span>
+                        <span style="display: inline-block; background-color: #dc3545; color: #ffffff; border-radius: 4px; padding: 2px 8px; margin: 2px;"><b>Clear All</b></span>
+                    </div>
+                    <p style="font-size: 13px; color: #155724; margin: 0;">One click. Everything gone. Clean view.</p>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Technical Details -->
-<section class="technical">
-    <div class="container">
-        <h2><i class="fa fa-cogs"></i>&nbsp; Technical Details</h2>
-        <table class="tech-table">
-            <tr><th>Version</th><td>19.0.1.0.0</td></tr>
-            <tr><th>Dependencies</th><td><code>web</code></td></tr>
-            <tr><th>License</th><td>LGPL-3</td></tr>
-            <tr><th>Type</th><td>Pure Frontend (OWL Component Patch)</td></tr>
-            <tr><th>Category</th><td>Tools / Usability</td></tr>
-            <tr><th>Configuration</th><td>None required -- works out of the box</td></tr>
-        </table>
+    <!-- FEATURES -->
+    <div style="background-color: #f8f5f7; padding: 48px 0; border-radius: 8px;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px;">Features</h2>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
+                        <div style="font-size: 24px; margin-bottom: 6px;">&#9889;</div>
+                        <strong style="font-size: 15px;">One Click</strong>
+                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Clears all filters, group-bys, favorites, and typed queries</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
+                        <div style="font-size: 24px; margin-bottom: 6px;">&#128064;</div>
+                        <strong style="font-size: 15px;">Auto-Hide</strong>
+                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Button only appears when there are active filters</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
+                        <div style="font-size: 24px; margin-bottom: 6px;">&#128207;</div>
+                        <strong style="font-size: 15px;">Matches Search Bar</strong>
+                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Same height, seamless integration</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
+                        <div style="font-size: 24px; margin-bottom: 6px;">&#128241;</div>
+                        <strong style="font-size: 15px;">Responsive</strong>
+                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Adapts to mobile and small screens</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
+                        <div style="font-size: 24px; margin-bottom: 6px;">&#128171;</div>
+                        <strong style="font-size: 15px;">Zero Server Load</strong>
+                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Pure frontend OWL patch - no Python</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
+                        <div style="font-size: 24px; margin-bottom: 6px;">&#127758;</div>
+                        <strong style="font-size: 15px;">Every View</strong>
+                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">List, kanban, pivot, graph - anywhere with a search bar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
 
-<!-- Footer -->
-<section class="footer">
-    <p>Developed by <strong>Naim Oudayet</strong></p>
-</section>
+    <!-- TECHNICAL -->
+    <div class="container py-5" style="text-align: center;">
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px;">Technical Details</h2>
+        <div style="max-width: 600px; margin: 0 auto;">
+            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
+                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Module</strong></div>
+                <div class="col-md-7 col-12" style="text-align: left;">no_clear_all_filters</div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
+                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Version</strong></div>
+                <div class="col-md-7 col-12" style="text-align: left;">19.0.1.0.0</div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
+                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Dependencies</strong></div>
+                <div class="col-md-7 col-12" style="text-align: left;">web (only)</div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
+                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">License</strong></div>
+                <div class="col-md-7 col-12" style="text-align: left;">LGPL-3 (Free / Open Source)</div>
+            </div>
+            <div class="row" style="padding: 10px 0;">
+                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">API Used</strong></div>
+                <div class="col-md-7 col-12" style="text-align: left;">searchModel.deactivateGroup() + clearQuery()</div>
+            </div>
+        </div>
+    </div>
 
-</body>
-</html>
+    <!-- CROSS-PROMOTION -->
+    <div style="background-color: #2d2233; padding: 48px 0; border-radius: 8px;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: #d4b8cf; font-size: 28px; font-weight: 700; margin-bottom: 8px;">More Modules by Naim OUDAYET</h2>
+            <p style="color: #bba8b5; font-size: 16px; margin-bottom: 32px;">Production-ready Odoo 19 modules. Tested. Documented.</p>
+
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128465;</div>
+                        <strong style="color: #ffffff; font-size: 16px;">Smart Undo - Recycle Bin</strong>
+                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Undo delete, undo edit, undo archive. 3-in-1 safety net. 25 unit tests.</p>
+                        <span style="display: inline-block; background-color: #e6a817; color: #333333; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">$39.99</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128196;</div>
+                        <strong style="color: #ffffff; font-size: 16px;">PDF Preview Before Print</strong>
+                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Preview any PDF report before printing or downloading.</p>
+                        <span style="display: inline-block; background-color: #017E84; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128274;</div>
+                        <strong style="color: #ffffff; font-size: 16px;">PDF Password Protection</strong>
+                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Encrypt PDF reports with static or dynamic passwords. GDPR ready.</p>
+                        <span style="display: inline-block; background-color: #017E84; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128172;</div>
+                        <strong style="color: #ffffff; font-size: 16px;">Scalable Chatter</strong>
+                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Resize, minimize, or reposition the chatter panel.</p>
+                        <span style="display: inline-block; background-color: #e6a817; color: #333333; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">$17.28</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128290;</div>
+                        <strong style="color: #ffffff; font-size: 16px;">Smart Number Formatter</strong>
+                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Real-time thousand separators while you type. Indian numbering.</p>
+                        <span style="display: inline-block; background-color: #017E84; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128269;</div>
+                        <strong style="color: #ffffff; font-size: 16px;">View All Modules</strong>
+                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Browse our complete catalog of Odoo 19 modules.</p>
+                        <span style="display: inline-block; background-color: #714B67; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">apps.odoo.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div style="text-align: center; padding: 36px 0; font-size: 14px; color: #888888; border-top: 1px solid #eeeeee;">
+        <p style="margin: 0;">
+            <strong style="color: #714B67;">Clear All Filters</strong> - Free, open source, Odoo 19<br/>
+            &copy; <strong style="color: #714B67;">Naim OUDAYET</strong> - LGPL-3 License - Odoo 19 Community &amp; Enterprise
+        </p>
+    </div>
+
+</section>

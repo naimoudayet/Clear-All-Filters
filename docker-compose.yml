@@ -1,29 +1,29 @@
-name: clearfilters-19
+name: clearfilters-17
 
 services:
-  db19:
-    image: postgres:16
-    container_name: clearfilters-pg-19
+  db17:
+    image: postgres:15
+    container_name: clearfilters-pg-17
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: odoo
       POSTGRES_PASSWORD: odoo
       PGDATA: /var/lib/postgresql/data/pgdata
     ports:
-      - "7419:5432"
+      - "7417:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data/pgdata
     restart: unless-stopped
 
-  odoo19:
+  odoo17:
     build: .
-    container_name: clearfilters-odoo-19
+    container_name: clearfilters-odoo-17
     depends_on:
-      - db19
+      - db17
     ports:
-      - "10419:8069"
+      - "10417:8069"
     environment:
-      HOST: db19
+      HOST: db17
       USER: odoo
       PASSWORD: odoo
     volumes:

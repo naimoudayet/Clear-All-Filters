@@ -1,4 +1,4 @@
-# Clear All Filters Button — Odoo 19
+# Clear All Filters Button — Odoo 17
 
 One-click button to wipe every active filter, group-by, favorite, and typed query from the search bar. Pure frontend OWL patch on the standard `SearchBar` component. Zero configuration, zero server impact.
 
@@ -23,7 +23,7 @@ One-click button to wipe every active filter, group-by, favorite, and typed quer
 
 | Item                 | Value                                                       |
 |----------------------|-------------------------------------------------------------|
-| Odoo Version         | 19.0                                                        |
+| Odoo Version         | 17.0                                                        |
 | License              | LGPL-3                                                      |
 | Dependencies         | `web`                                                       |
 | Python Dependencies  | None                                                        |
@@ -47,26 +47,26 @@ None. Once installed, the button appears next to the search bar on every view th
 docker-compose up -d
 ```
 
-- Odoo: http://localhost:10419
-- PostgreSQL: internal `db19` service (port `7419` exposed for tooling)
+- Odoo: http://localhost:10417
+- PostgreSQL: internal `db17` service (port `7417` exposed for tooling)
 
 The provided `Dockerfile` installs Chromium and `python3-websocket` so Odoo's `HttpCase.browser_js` can run the JS test suite headlessly.
 
 ## Running Tests
 
 ```bash
-docker exec -it clearfilters-odoo-19 \
+docker exec -it clearfilters-odoo-17 \
   odoo --test-enable --stop-after-init \
   -d test_db -i no_clear_all_filters \
   --test-tags no_clear_all_filters_js
 ```
 
-Runs the Hoot JS specs under `static/tests/` plus the `HttpCase` wrapper in `tests/test_js_suite.py`.
+Runs the QUnit JS specs under `static/tests/` plus the `HttpCase` wrapper in `tests/test_js_suite.py`.
 
 ## Compatibility
 
-- Odoo 19.0 Community
-- Odoo 19.0 Enterprise
+- Odoo 17.0 Community
+- Odoo 17.0 Enterprise
 - Works with every view that uses Odoo's standard search bar (list, kanban, pivot, graph, calendar, activity, custom views)
 
 ## Author

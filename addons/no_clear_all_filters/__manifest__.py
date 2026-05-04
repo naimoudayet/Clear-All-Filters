@@ -6,7 +6,7 @@
     "description": "Clear All Filters Button adds a single button next to the search bar that "
                    "removes all active filters, group-bys, favorites, and typed queries in one click. "
                    "Uses Odoo's native searchModel API. Pure frontend, zero server impact, no configuration.",
-    "version": "19.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Extra Tools",
     "website": "https://www.oudayet.com",
     "author": "Naim OUDAYET",
@@ -23,8 +23,8 @@
             "no_clear_all_filters/static/src/xml/clear_filters.xml",
             "no_clear_all_filters/static/src/js/clear_filters.js",
         ],
-        "web.assets_unit_tests": [
-            "no_clear_all_filters/static/tests/**/*.test.js",
+        "web.qunit_suite_tests": [
+            "no_clear_all_filters/static/tests/**/*_tests.js",
         ],
     },
     "images": [

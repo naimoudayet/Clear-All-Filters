@@ -3,179 +3,373 @@
     <!-- HERO -->
     <div style="background-color: #714B67; color: #ffffff; padding: 60px 20px; text-align: center; border-radius: 0 0 8px 8px;">
         <h1 style="font-size: 42px; font-weight: 700; color: #ffffff; margin: 0 0 8px;">Clear All Filters</h1>
-        <p style="font-size: 20px; color: #ffffff; margin: 0 0 6px;">One click to reset every filter, group-by, and favorite</p>
-        <p style="font-size: 15px; color: #e8dde5; margin: 0 0 20px;">5 clicks become 1. Works on every list and kanban view.</p>
-        <span style="display: inline-block; background-color: #5a3a50; border: 1px solid #8a6a80; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">Odoo 19</span>
-        <span style="display: inline-block; background-color: #017E84; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">FREE</span>
-        <span style="display: inline-block; background-color: #e6a817; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #333333; margin: 0 4px;">Zero Config</span>
+        <p style="font-size: 20px; color: #ffffff; margin: 0 0 20px;">One click to wipe every active filter, group-by, favorite, and search query in the search bar</p>
+        <span style="display: inline-block; background-color: #5A3A52; border: 1px solid #8A6A80; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">Odoo 19</span>
+        <span style="display: inline-block; background-color: #00A09D; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">FREE</span>
+        <span style="display: inline-block; background-color: #FF7F4F; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">Zero Config</span>
     </div>
 
-    <!-- THE PROBLEM -->
+    <!-- PROBLEM / SOLUTION -->
     <div class="container py-5" style="text-align: center;">
-        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px;">The Problem</h2>
-        <p style="color: #666666; font-size: 16px; margin-bottom: 32px;">You've applied 5 filters and 2 group-bys. Now you want a clean view. That's 7 clicks on tiny X buttons.</p>
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px;">Five Filters, Five Tiny X Buttons?</h2>
+        <p style="color: #475569; font-size: 16px; margin-bottom: 32px;">In standard Odoo, every active filter, group-by, and favorite has its own little <strong>x</strong>. Clearing the search bar to start over means hunting them down one by one.</p>
 
         <div class="row">
             <div class="col-md-6 col-12 mb-4">
-                <div style="background-color: #f8d7da; border: 2px solid #f5c6cb; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
-                    <p style="font-size: 14px; font-weight: 600; color: #721c24; margin: 0 0 12px;">Standard Odoo</p>
-                    <div style="font-size: 14px; color: #721c24; margin-bottom: 12px;">
-                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Country = France <b>x</b></span>
-                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">State = Sale <b>x</b></span>
-                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Salesperson <b>x</b></span>
-                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">This Month <b>x</b></span>
+                <div style="background-color: #F8D7DA; border: 2px solid #F5C6CB; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
+                    <p style="font-size: 14px; font-weight: 600; color: #721C24; margin: 0 0 12px;">Without this module</p>
+                    <div style="font-size: 13px; color: #721C24; margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: #E8DDE5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Country = France <b>x</b></span>
+                        <span style="display: inline-block; background-color: #E8DDE5; border-radius: 4px; padding: 2px 8px; margin: 2px;">State = Sale <b>x</b></span>
+                        <span style="display: inline-block; background-color: #E8DDE5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Salesperson <b>x</b></span>
+                        <span style="display: inline-block; background-color: #E8DDE5; border-radius: 4px; padding: 2px 8px; margin: 2px;">This Month <b>x</b></span>
                     </div>
-                    <p style="font-size: 13px; color: #721c24; margin: 0;">Click X on each one. 4 filters = 4 clicks. Tedious.</p>
+                    <p style="font-size: 13px; color: #721C24; margin: 0;">Click X on every chip. Four filters &rarr; four clicks. Tedious every single time.</p>
                 </div>
             </div>
             <div class="col-md-6 col-12 mb-4">
-                <div style="background-color: #d4edda; border: 2px solid #c3e6cb; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
-                    <p style="font-size: 14px; font-weight: 600; color: #155724; margin: 0 0 12px;">With This Module</p>
-                    <div style="font-size: 14px; color: #155724; margin-bottom: 12px;">
-                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Country = France</span>
-                        <span style="display: inline-block; background-color: #e8dde5; border-radius: 4px; padding: 2px 8px; margin: 2px;">State = Sale</span>
+                <div style="background-color: #D4EDDA; border: 2px solid #C3E6CB; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
+                    <p style="font-size: 14px; font-weight: 600; color: #155724; margin: 0 0 12px;">With this module</p>
+                    <div style="font-size: 13px; color: #155724; margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: #E8DDE5; border-radius: 4px; padding: 2px 8px; margin: 2px;">Country = France</span>
+                        <span style="display: inline-block; background-color: #E8DDE5; border-radius: 4px; padding: 2px 8px; margin: 2px;">State = Sale</span>
                         <span style="display: inline-block; background-color: #dc3545; color: #ffffff; border-radius: 4px; padding: 2px 8px; margin: 2px;"><b>Clear All</b></span>
                     </div>
-                    <p style="font-size: 13px; color: #155724; margin: 0;">One click. Everything gone. Clean view.</p>
+                    <p style="font-size: 13px; color: #155724; margin: 0;">A single button next to the search bar. One click. Search bar empty. Done.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FEATURES -->
-    <div style="background-color: #f8f5f7; padding: 48px 0; border-radius: 8px;">
+    <!-- FEATURE GRID -->
+    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
         <div class="container" style="text-align: center;">
-            <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px;">Features</h2>
+            <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px;">Four Things It Does Well</h2>
+            <p style="color: #475569; font-size: 16px; margin-bottom: 32px;">Lightweight, focused, no configuration.</p>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 2px solid #E8DDE5; border-top: 4px solid #714B67; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#9889;</div>
+                        <strong style="font-size: 15px;">One-Click Reset</strong>
+                        <p style="font-size: 13px; color: #64748B; margin-top: 8px;">Wipes every active filter, group-by, favorite, and typed query in a single click. No partial state.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 2px solid #E8DDE5; border-top: 4px solid #00A09D; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128064;</div>
+                        <strong style="font-size: 15px;">Auto-Hide</strong>
+                        <p style="font-size: 13px; color: #64748B; margin-top: 8px;">The button only appears when there is something to clear. A clean view stays clean.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 2px solid #E8DDE5; border-top: 4px solid #FF7F4F; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#127758;</div>
+                        <strong style="font-size: 15px;">Every View</strong>
+                        <p style="font-size: 13px; color: #64748B; margin-top: 8px;">List, kanban, pivot, graph, calendar - anywhere Odoo renders the standard search bar, the button is there.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 2px solid #E8DDE5; border-top: 4px solid #5A3A52; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">&#128171;</div>
+                        <strong style="font-size: 15px;">Zero Server Load</strong>
+                        <p style="font-size: 13px; color: #64748B; margin-top: 8px;">Pure frontend OWL patch on the SearchBar component. No Python, no RPC, no database changes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="color: #94A3B8; font-size: 14px; margin-top: 8px;">Uses Odoo's native <code>searchModel.deactivateGroup()</code> + <code>clearQuery()</code>. No private API.</p>
+        </div>
+    </div>
+
+    <!-- REAL-WORLD SCENARIOS -->
+    <div class="container py-5">
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center;">Real-World Scenarios</h2>
+
+        <div class="row">
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-left: 4px solid #714B67; border-radius: 8px; padding: 20px; height: 100%;">
+                    <strong style="color: #714B67; font-size: 16px;">Sales pipeline review</strong>
+                    <p style="font-size: 14px; color: #475569; margin: 10px 0 0; line-height: 1.6;">After drilling down by salesperson, stage, and date range, one click brings the full pipeline back instead of hunting four separate close buttons.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-left: 4px solid #00A09D; border-radius: 8px; padding: 20px; height: 100%;">
+                    <strong style="color: #00A09D; font-size: 16px;">Inventory triage</strong>
+                    <p style="font-size: 14px; color: #475569; margin: 10px 0 0; line-height: 1.6;">Switch between &quot;low-stock by warehouse&quot; and the global product list without manually undoing every group-by and favorite.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-left: 4px solid #FF7F4F; border-radius: 8px; padding: 20px; height: 100%;">
+                    <strong style="color: #FF7F4F; font-size: 16px;">Accounting month-end</strong>
+                    <p style="font-size: 14px; color: #475569; margin: 10px 0 0; line-height: 1.6;">Repeatedly toggling period, journal, and partner filters during reconciliation. The Clear All button skips the cleanup ritual.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-left: 4px solid #5A3A52; border-radius: 8px; padding: 20px; height: 100%;">
+                    <strong style="color: #5A3A52; font-size: 16px;">Helpdesk ticket sweeps</strong>
+                    <p style="font-size: 14px; color: #475569; margin: 10px 0 0; line-height: 1.6;">Going from &quot;my open tickets, this week, high priority&quot; back to the team-wide queue is now a single button instead of three deactivations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px;">How It Works</h2>
+
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
+                        <div style="font-size: 32px; margin-bottom: 8px; color: #714B67; font-weight: 700;">1</div>
+                        <strong>Apply your filters</strong>
+                        <p style="font-size: 14px; color: #64748B; margin-top: 8px;">Use the search bar normally - filters, group-bys, favorites, and free-text queries. The Clear All button appears the moment something is active.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
+                        <div style="font-size: 32px; margin-bottom: 8px; color: #714B67; font-weight: 700;">2</div>
+                        <strong>Click Clear All</strong>
+                        <p style="font-size: 14px; color: #64748B; margin-top: 8px;">A single click deactivates every facet through Odoo's native <code>searchModel</code> API and clears any typed query.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
+                        <div style="font-size: 32px; margin-bottom: 8px; color: #714B67; font-weight: 700;">3</div>
+                        <strong>Search bar resets</strong>
+                        <p style="font-size: 14px; color: #64748B; margin-top: 8px;">One re-render, one fresh query. The button hides itself again until the next time you build a filter stack.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INSTALLATION -->
+    <div class="container py-5">
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 16px; text-align: center;">Installation</h2>
+        <p style="color: #475569; font-size: 16px; margin-bottom: 32px; text-align: center;">Two steps. No Python dependencies, no database changes, no configuration.</p>
+
+        <div class="row">
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 10px; padding: 24px; height: 100%;">
+                    <p style="font-size: 13px; font-weight: 600; color: #94A3B8; margin: 0 0 8px; text-transform: uppercase;">Step 1 - addons path</p>
+                    <strong style="color: #714B67;">Drop the module in</strong>
+                    <div style="background-color: #2D2233; color: #ffffff; padding: 12px 16px; border-radius: 6px; margin-top: 12px; font-family: monospace; font-size: 14px;">cp -r no_clear_all_filters /path/to/addons/</div>
+                    <p style="font-size: 13px; color: #64748B; margin-top: 12px;">Place the <code>no_clear_all_filters</code> folder in any directory listed in your Odoo <code>addons_path</code>.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-4">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 10px; padding: 24px; height: 100%;">
+                    <p style="font-size: 13px; font-weight: 600; color: #94A3B8; margin: 0 0 8px; text-transform: uppercase;">Step 2 - in Odoo</p>
+                    <strong style="color: #714B67;">Install the module</strong>
+                    <p style="font-size: 14px; color: #475569; margin-top: 12px;">Apps menu &rarr; remove the <em>Apps</em> filter &rarr; search "Clear All Filters" &rarr; Install. The button appears next to the search bar everywhere immediately.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKS WITH -->
+    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px;">Works With Every Search Bar</h2>
+            <p style="color: #475569; font-size: 15px; margin-bottom: 32px;">No allow-list. No per-view setup. The OWL patch extends Odoo's standard SearchBar component.</p>
 
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-12 mb-4">
-                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
-                        <div style="font-size: 24px; margin-bottom: 6px;">&#9889;</div>
-                        <strong style="font-size: 15px;">One Click</strong>
-                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Clears all filters, group-bys, favorites, and typed queries</p>
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px; text-align: center;">
+                        <strong style="color: #714B67;">List Views</strong>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-12 mb-4">
-                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
-                        <div style="font-size: 24px; margin-bottom: 6px;">&#128064;</div>
-                        <strong style="font-size: 15px;">Auto-Hide</strong>
-                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Button only appears when there are active filters</p>
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px; text-align: center;">
+                        <strong style="color: #714B67;">Kanban Views</strong>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-12 mb-4">
-                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
-                        <div style="font-size: 24px; margin-bottom: 6px;">&#128207;</div>
-                        <strong style="font-size: 15px;">Matches Search Bar</strong>
-                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Same height, seamless integration</p>
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px; text-align: center;">
+                        <strong style="color: #714B67;">Pivot &amp; Graph</strong>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-12 mb-4">
-                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
-                        <div style="font-size: 24px; margin-bottom: 6px;">&#128241;</div>
-                        <strong style="font-size: 15px;">Responsive</strong>
-                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Adapts to mobile and small screens</p>
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px; text-align: center;">
+                        <strong style="color: #714B67;">Calendar</strong>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-12 mb-4">
-                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
-                        <div style="font-size: 24px; margin-bottom: 6px;">&#128171;</div>
-                        <strong style="font-size: 15px;">Zero Server Load</strong>
-                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">Pure frontend OWL patch - no Python</p>
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px; text-align: center;">
+                        <strong style="color: #714B67;">Activity</strong>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-12 mb-4">
-                    <div style="background-color: #ffffff; border: 1px solid #e8dde5; border-radius: 10px; padding: 20px 16px; text-align: center; height: 100%;">
-                        <div style="font-size: 24px; margin-bottom: 6px;">&#127758;</div>
-                        <strong style="font-size: 15px;">Every View</strong>
-                        <p style="font-size: 13px; color: #777777; margin-top: 4px;">List, kanban, pivot, graph - anywhere with a search bar</p>
+                    <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px; text-align: center;">
+                        <strong style="color: #714B67;">Any Custom View</strong>
                     </div>
+                </div>
+            </div>
+
+            <p style="color: #94A3B8; font-size: 13px; margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">Views without a search bar (forms, dashboards) are simply not affected - no error, no broken layout.</p>
+        </div>
+    </div>
+
+    <!-- LIMITATIONS / HONEST SCOPE -->
+    <div class="container py-5">
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 16px; text-align: center;">What This Module Doesn't Do</h2>
+        <p style="color: #475569; font-size: 15px; margin-bottom: 32px; text-align: center;">Honest scope. Here's what's out of reach.</p>
+
+        <div class="row">
+            <div class="col-md-6 col-12 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px 20px;">
+                    <strong style="color: #dc3545;">&#10007;</strong>&nbsp;
+                    <strong>Default-domain reset</strong>
+                    <p style="font-size: 13px; color: #64748B; margin: 6px 0 0;">Filters declared in the action's <code>context</code> as defaults reapply on the next render. The button clears user-applied facets, not action-level defaults.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px 20px;">
+                    <strong style="color: #dc3545;">&#10007;</strong>&nbsp;
+                    <strong>Selective clear</strong>
+                    <p style="font-size: 13px; color: #64748B; margin: 6px 0 0;">It's all or nothing. There is no &quot;clear filters but keep group-bys&quot; mode - use the per-facet <strong>x</strong> chip when you only want to remove one.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px 20px;">
+                    <strong style="color: #dc3545;">&#10007;</strong>&nbsp;
+                    <strong>Per-user opt-out</strong>
+                    <p style="font-size: 13px; color: #64748B; margin: 6px 0 0;">The button is shown to every user who can see the search bar. There is no per-user toggle to hide it.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px 20px;">
+                    <strong style="color: #dc3545;">&#10007;</strong>&nbsp;
+                    <strong>Undo</strong>
+                    <p style="font-size: 13px; color: #64748B; margin: 6px 0 0;">Once you click Clear All, the previous facet stack is gone. Re-pick what you need from the favorites menu if you want it back.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <div style="background-color: #FFF3CD; border: 1px solid #FFEEBA; border-radius: 8px; padding: 16px 20px;">
+                    <strong style="color: #856404;">&#9888;</strong>&nbsp;
+                    <strong>Heavy-customization themes</strong>
+                    <p style="font-size: 13px; color: #856404; margin: 6px 0 0;">The button is appended inside the standard <code>o_cp_searchview</code> container. A theme that replaces the search bar entirely will need its own integration point.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <div style="background-color: #FFF3CD; border: 1px solid #FFEEBA; border-radius: 8px; padding: 16px 20px;">
+                    <strong style="color: #856404;">&#9888;</strong>&nbsp;
+                    <strong>Other SearchBar-patching modules</strong>
+                    <p style="font-size: 13px; color: #856404; margin: 6px 0 0;">Two modules can each <code>patch()</code> the SearchBar prototype safely, but conflicting renders of the same xpath may collide. Test once if your stack already extends the search bar.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- TECHNICAL -->
-    <div class="container py-5" style="text-align: center;">
-        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px;">Technical Details</h2>
-        <div style="max-width: 600px; margin: 0 auto;">
-            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
-                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Module</strong></div>
-                <div class="col-md-7 col-12" style="text-align: left;">no_clear_all_filters</div>
+    <!-- DARK CALLOUT - SEARCH MODEL NOTE -->
+    <div style="background-color: #2D2233; padding: 36px 20px; border-radius: 8px;">
+        <div class="container">
+            <h2 style="color: #D4B8CF; font-size: 22px; font-weight: 700; margin-bottom: 12px; text-align: center;">&#128737; A Note on Odoo's searchModel</h2>
+            <p style="color: #BBA8B5; font-size: 14px; line-height: 1.7; margin: 0; max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;">
+                The button drives the same public <code>searchModel</code> API that Odoo's own facet-close buttons use - <code>deactivateGroup()</code> per facet, then <code>clearQuery()</code> for the typed text. Notifications are batched with the <code>blockNotification</code> flag so the view re-renders only once at the end. As long as Odoo keeps that public API stable, the module keeps working without per-version forks. Each version branch ships its own JS test suite to catch the day that contract changes.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="container py-5">
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center;">FAQ</h2>
+
+        <div style="max-width: 760px; margin: 0 auto;">
+            <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
+                <strong style="color: #714B67;">Does this clear my saved favorites permanently?</strong>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">No. The button only deactivates favorites in the current view. Your saved favorites stay in the favorites menu, ready to re-apply.</p>
             </div>
-            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
-                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Version</strong></div>
-                <div class="col-md-7 col-12" style="text-align: left;">19.0.1.0.0</div>
+            <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
+                <strong style="color: #714B67;">Will it clear the action's default filter?</strong>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">User-applied facets are cleared. Filters declared in the action's <code>context</code> as defaults reapply on the next render - that's a server-side decision, not a client-side facet.</p>
             </div>
-            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
-                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Dependencies</strong></div>
-                <div class="col-md-7 col-12" style="text-align: left;">web (only)</div>
+            <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
+                <strong style="color: #714B67;">Does it work in pivot, graph, and kanban views?</strong>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">Yes. The patch is on the shared <code>SearchBar</code> component, so every view that uses Odoo's standard search bar gets the button.</p>
             </div>
-            <div class="row" style="border-bottom: 1px solid #e8dde5; padding: 10px 0;">
-                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">License</strong></div>
-                <div class="col-md-7 col-12" style="text-align: left;">LGPL-3 (Free / Open Source)</div>
+            <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
+                <strong style="color: #714B67;">What about Odoo 16 / 17 / 18?</strong>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">This branch targets Odoo 19 and uses the v19 <code>searchModel</code> API surface. Earlier-version branches will follow if there's demand.</p>
             </div>
-            <div class="row" style="padding: 10px 0;">
-                <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">API Used</strong></div>
-                <div class="col-md-7 col-12" style="text-align: left;">searchModel.deactivateGroup() + clearQuery()</div>
+            <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
+                <strong style="color: #714B67;">Does it conflict with other modules that extend the search bar?</strong>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">Multiple modules can <code>patch()</code> <code>SearchBar.prototype</code> simultaneously - that's the supported Odoo pattern. Conflicts only arise if another module replaces the same xpath inside <code>o_cp_searchview</code>.</p>
+            </div>
+            <div style="padding: 16px 0;">
+                <strong style="color: #714B67;">Will this break with future Odoo updates?</strong>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">It uses the public <code>searchModel.deactivateGroup()</code> and <code>clearQuery()</code> methods. As long as those stay in their current form, the module keeps working. The shipped JS test suite catches regressions early.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TECHNICAL DETAILS -->
+    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
+        <div class="container">
+            <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center;">Technical Details</h2>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Module</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;">no_clear_all_filters</div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Version</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;">19.0.1.0.0</div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Depends on</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;">web</div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Python deps</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;">None (pure frontend)</div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">License</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;">LGPL-3 (Free / Open Source)</div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Mechanism</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;"><code>patch()</code> on <code>SearchBar.prototype</code> + xpath into <code>o_cp_searchview</code></div>
+                </div>
+                <div class="row" style="padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Test coverage</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;">Hoot/QUnit JS suite (deactivate + clearQuery) + HttpCase wrapper</div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- CROSS-PROMOTION -->
-    <div style="background-color: #2d2233; padding: 48px 0; border-radius: 8px;">
+    <div style="background-color: #2D2233; padding: 48px 0; border-radius: 8px;">
         <div class="container" style="text-align: center;">
-            <h2 style="color: #d4b8cf; font-size: 28px; font-weight: 700; margin-bottom: 8px;">More Modules by Naim OUDAYET</h2>
-            <p style="color: #bba8b5; font-size: 16px; margin-bottom: 32px;">Production-ready Odoo 19 modules. Tested. Documented.</p>
+            <h2 style="color: #D4B8CF; font-size: 28px; font-weight: 700; margin-bottom: 8px;">More Modules by Naim OUDAYET</h2>
+            <p style="color: #BBA8B5; font-size: 16px; margin-bottom: 32px;">Production-ready Odoo modules. Tested. Documented.</p>
 
             <div class="row">
                 <div class="col-md-4 col-12 mb-4">
-                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
-                        <div style="font-size: 28px; margin-bottom: 8px;">&#128465;</div>
-                        <strong style="color: #ffffff; font-size: 16px;">Smart Undo - Recycle Bin</strong>
-                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Undo delete, undo edit, undo archive. 3-in-1 safety net. 25 unit tests.</p>
-                        <span style="display: inline-block; background-color: #e6a817; color: #333333; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">$39.99</span>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12 mb-4">
-                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                    <div style="background-color: #3A2D40; border: 1px solid #4A3D50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
                         <div style="font-size: 28px; margin-bottom: 8px;">&#128196;</div>
                         <strong style="color: #ffffff; font-size: 16px;">PDF Preview Before Print</strong>
-                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Preview any PDF report before printing or downloading.</p>
-                        <span style="display: inline-block; background-color: #017E84; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
+                        <p style="font-size: 13px; color: #BBA8B5; margin: 8px 0 12px;">Preview any PDF report in a full-screen dialog before printing or downloading.</p>
+                        <span style="display: inline-block; background-color: #00A09D; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
                     </div>
                 </div>
                 <div class="col-md-4 col-12 mb-4">
-                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                    <div style="background-color: #3A2D40; border: 1px solid #4A3D50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
                         <div style="font-size: 28px; margin-bottom: 8px;">&#128274;</div>
                         <strong style="color: #ffffff; font-size: 16px;">PDF Password Protection</strong>
-                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Encrypt PDF reports with static or dynamic passwords. GDPR ready.</p>
-                        <span style="display: inline-block; background-color: #017E84; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 col-12 mb-4">
-                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
-                        <div style="font-size: 28px; margin-bottom: 8px;">&#128172;</div>
-                        <strong style="color: #ffffff; font-size: 16px;">Scalable Chatter</strong>
-                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Resize, minimize, or reposition the chatter panel.</p>
-                        <span style="display: inline-block; background-color: #e6a817; color: #333333; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">$17.28</span>
+                        <p style="font-size: 13px; color: #BBA8B5; margin: 8px 0 12px;">Encrypt PDF reports with static or dynamic passwords. GDPR-friendly.</p>
+                        <span style="display: inline-block; background-color: #00A09D; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
                     </div>
                 </div>
                 <div class="col-md-4 col-12 mb-4">
-                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
-                        <div style="font-size: 28px; margin-bottom: 8px;">&#128290;</div>
-                        <strong style="color: #ffffff; font-size: 16px;">Smart Number Formatter</strong>
-                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Real-time thousand separators while you type. Indian numbering.</p>
-                        <span style="display: inline-block; background-color: #017E84; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">FREE</span>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12 mb-4">
-                    <div style="background-color: #3a2d40; border: 1px solid #4a3d50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
+                    <div style="background-color: #3A2D40; border: 1px solid #4A3D50; border-radius: 10px; padding: 20px; text-align: center; height: 100%;">
                         <div style="font-size: 28px; margin-bottom: 8px;">&#128269;</div>
                         <strong style="color: #ffffff; font-size: 16px;">View All Modules</strong>
-                        <p style="font-size: 13px; color: #bba8b5; margin: 8px 0 12px;">Browse our complete catalog of Odoo 19 modules.</p>
+                        <p style="font-size: 13px; color: #BBA8B5; margin: 8px 0 12px;">Browse the complete catalog of Odoo modules by Naim OUDAYET.</p>
                         <span style="display: inline-block; background-color: #714B67; color: #ffffff; border-radius: 12px; padding: 3px 12px; font-size: 13px; font-weight: 600;">apps.odoo.com</span>
                     </div>
                 </div>
@@ -184,10 +378,10 @@
     </div>
 
     <!-- FOOTER -->
-    <div style="text-align: center; padding: 36px 0; font-size: 14px; color: #888888; border-top: 1px solid #eeeeee;">
+    <div style="text-align: center; padding: 36px 0; font-size: 14px; color: #94A3B8;">
         <p style="margin: 0;">
             <strong style="color: #714B67;">Clear All Filters</strong> - Free, open source, Odoo 19<br/>
-            &copy; <strong style="color: #714B67;">Naim OUDAYET</strong> - LGPL-3 License - Odoo 19 Community &amp; Enterprise
+            &copy; <strong style="color: #714B67;">Naim OUDAYET</strong> - LGPL-3 License
         </p>
     </div>
 

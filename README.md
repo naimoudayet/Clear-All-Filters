@@ -41,33 +41,15 @@ One-click button to wipe every active filter, group-by, favorite, and typed quer
 
 None. Once installed, the button appears next to the search bar on every view that has one. It auto-hides when there are no active facets.
 
-## Docker Setup (Development)
-
-```bash
-docker-compose up -d
-```
-
-- Odoo: http://localhost:10418
-- PostgreSQL: internal `db18` service (port `7418` exposed for tooling)
-
-The provided `Dockerfile` installs Chromium and `python3-websocket` so Odoo's `HttpCase.browser_js` can run the JS test suite headlessly.
-
-## Running Tests
-
-```bash
-docker exec -it clearfilters-odoo-18 \
-  odoo --test-enable --stop-after-init \
-  -d test_db -i no_clear_all_filters \
-  --test-tags no_clear_all_filters_js
-```
-
-Runs the Hoot JS specs under `static/tests/` plus the `HttpCase` wrapper in `tests/test_js_suite.py`.
-
 ## Compatibility
 
 - Odoo 18.0 Community
 - Odoo 18.0 Enterprise
 - Works with every view that uses Odoo's standard search bar (list, kanban, pivot, graph, calendar, activity, custom views)
+
+## Development
+
+For the development stack (Docker compose with Postgres + Odoo + headless Chrome for tests), see the [`18.0.dev`](https://github.com/naimoudayet/Clear-All-Filters/tree/18.0.dev) branch.
 
 ## Author
 

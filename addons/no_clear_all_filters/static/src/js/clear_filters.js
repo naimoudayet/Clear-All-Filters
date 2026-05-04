@@ -1,37 +1,52 @@
 /** @odoo-module **/
 // Copyright 2026 Naim OUDAYET
-// License OPL-1
+// License LGPL-3
 
 import { SearchBar } from "@web/search/search_bar/search_bar";
 import { patch } from "@web/core/utils/patch";
 
+/**
+ * Returns true if the given searchModel has at least one active facet
+ * (filter, group-by, favorite) or any text in the typed query.
+ *
+ * Pure function — exported for unit tests.
+ */
+export function hasActiveFilters(searchModel) {
+    if (!searchModel) {
+        return false;
+    }
+    const facets = searchModel.facets || [];
+    const query = searchModel.query || [];
+    return facets.length > 0 || query.length > 0;
+}
+
+/**
+ * Clears all active filters, group-bys, favorites, and typed query
+ * from the given searchModel.
+ *
+ * Uses `blockNotification` to suppress per-facet re-renders so the view
+ * only refreshes once at the end. Pure function — exported for unit tests.
+ */
+export function clearAllFilters(searchModel) {
+    if (!searchModel) {
+        return;
+    }
+    searchModel.blockNotification = true;
+    for (const facet of [...(searchModel.facets || [])]) {
+        searchModel.deactivateGroup(facet.groupId);
+    }
+    searchModel.blockNotification = false;
+    if (typeof searchModel.clearQuery === "function") {
+        searchModel.clearQuery();
+    }
+}
+
 patch(SearchBar.prototype, {
-    /**
-     * Returns true if there is at least one active facet
-     * (filter, group-by, favorite, or typed query).
-     */
     get hasActiveFilters() {
-        const searchModel = this.env.searchModel;
-        return searchModel.facets.length > 0 || searchModel.query.length > 0;
+        return hasActiveFilters(this.env.searchModel);
     },
 
-    /**
-     * Clears all active filters, group-bys, favorites, and typed query
-     * from the search bar in a single click.
-     *
-     * Uses Odoo 19's native searchModel methods for maximum compatibility.
-     */
     clearAllFilters() {
-        const searchModel = this.env.searchModel;
-        // Block notifications during batch deactivation to avoid
-        // multiple re-renders — one _notify() at the end is enough.
-        searchModel.blockNotification = true;
-        // Deactivate every active facet (filters, groupBy, favorites)
-        for (const facet of [...searchModel.facets]) {
-            searchModel.deactivateGroup(facet.groupId);
-        }
-        searchModel.blockNotification = false;
-        // Clear any typed text in the search bar
-        searchModel.clearQuery();
+        clearAllFilters(this.env.searchModel);
     },
 });

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2026 Naim OUDAYET -->
-<!-- License OPL-1 -->
+<!-- License LGPL-3 -->
 <templates xml:space="preserve">
 
     <!-- Extend the SearchBar template to add a Clear All button -->

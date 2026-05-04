@@ -1,54 +1,83 @@
-# Clear All Filters Button
+# Clear All Filters Button — Odoo 19
 
-**Odoo 19.0** | **LGPL-3** | **FREE** | **Author: Naim OUDAYET**
-
-One-click button to clear all active filters, group-bys, and favorites from the search bar. No more clicking X on each tag individually.
+One-click button to wipe every active filter, group-by, favorite, and typed query from the search bar. Pure frontend OWL patch on the standard `SearchBar` component. Zero configuration, zero server impact.
 
 ## Features
 
-- **One Button** - removes all active filters, group-bys, favorites, and typed queries
-- **Auto-Hide** - button only appears when filters are active
-- **Matches Search Bar** - same height, seamless integration
-- **Responsive** - adapts to mobile/small screens
-- **Pure Frontend** - OWL widget patch, zero server impact
-- **Uses Native API** - calls Odoo 19's `searchModel.deactivateGroup()` and `clearQuery()`
+- **One-Click Reset** — clears every active filter, group-by, favorite, and typed query in a single click.
+- **Auto-Hide** — the button only appears when the search bar has something to clear.
+- **Every View** — list, kanban, pivot, graph, calendar, activity, and any custom view that uses Odoo's standard search bar.
+- **Native API** — drives `searchModel.deactivateGroup()` + `clearQuery()`. No private API, no monkey-patches.
+- **Single Re-Render** — uses `blockNotification` to batch facet deactivations into one view refresh.
+- **Pure Frontend** — no Python models, no RPC, no database changes.
+- **Zero Configuration** — install and the button is there everywhere.
+
+## How It Works
+
+1. The module patches `SearchBar.prototype` to add a `hasActiveFilters` getter and a `clearAllFilters` method.
+2. A QWeb xpath inserts a button inside the standard `o_cp_searchview` container, conditionally rendered when `hasActiveFilters` is true.
+3. On click, `clearAllFilters` iterates `searchModel.facets`, calls `deactivateGroup(facet.groupId)` on each (with `blockNotification = true` to suppress per-facet re-renders), then `clearQuery()` to wipe any typed text.
+4. One final notification fires, the view re-renders once, the button hides itself again until the next facet stack.
+
+## Technical Details
+
+| Item                 | Value                                                       |
+|----------------------|-------------------------------------------------------------|
+| Odoo Version         | 19.0                                                        |
+| License              | LGPL-3                                                      |
+| Dependencies         | `web`                                                       |
+| Python Dependencies  | None                                                        |
+| Type                 | Pure Frontend (OWL patch on `SearchBar.prototype`)          |
+| Mechanism            | `searchModel.deactivateGroup()` + `clearQuery()`            |
+| Configuration        | None (zero-config)                                          |
 
 ## Installation
 
-1. Copy `no_clear_all_filters` to your Odoo addons directory
-2. Update Apps List, search "Clear All Filters", install
+1. Place the `no_clear_all_filters` folder in your Odoo addons directory.
+2. Restart the Odoo server (or run with `-u no_clear_all_filters` on first install).
+3. Go to **Apps**, remove the *Apps* filter, search for **"Clear All Filters"**, and click **Install**.
 
-### Docker
+## Configuration
+
+None. Once installed, the button appears next to the search bar on every view that has one. It auto-hides when there are no active facets.
+
+## Docker Setup (Development)
 
 ```bash
 docker-compose up -d
 ```
 
-Access at http://localhost:10419
+- Odoo: http://localhost:10419
+- PostgreSQL: internal `db19` service (port `7419` exposed for tooling)
 
-## Usage
+The provided `Dockerfile` installs Chromium and `python3-websocket` so Odoo's `HttpCase.browser_js` can run the JS test suite headlessly.
 
-1. Go to any list or kanban view
-2. Apply some filters, group-bys, or favorites
-3. Click the red **Clear All** button that appears next to the search bar
-4. Everything is cleared in one shot
+## Running Tests
 
-## Technical Details
+```bash
+docker exec -it clearfilters-odoo-19 \
+  odoo --test-enable --stop-after-init \
+  -d test_db -i no_clear_all_filters \
+  --test-tags no_clear_all_filters_js
+```
 
-| Detail | Value |
-|--------|-------|
-| Module Name | `no_clear_all_filters` |
-| Version | 19.0.1.0.0 |
-| Dependencies | `web` |
-| License | LGPL-3 |
-| Type | Pure frontend (OWL 2 patch on SearchBar) |
-| Server Impact | None |
+Runs the Hoot JS specs under `static/tests/` plus the `HttpCase` wrapper in `tests/test_js_suite.py`.
+
+## Compatibility
+
+- Odoo 19.0 Community
+- Odoo 19.0 Enterprise
+- Works with every view that uses Odoo's standard search bar (list, kanban, pivot, graph, calendar, activity, custom views)
 
 ## Author
 
 **Naim OUDAYET**
-- [All Modules](https://apps.odoo.com/apps/modules/browse?author=Naim%20OUDAYET)
+Odoo developer based in Tunisia.
+
+- Website: [oudayet.com](https://www.oudayet.com)
+- Email: contact@oudayet.com
+- GitHub: [@naimoudayet](https://github.com/naimoudayet)
 
 ## License
 
-LGPL-3
+This module is licensed under [LGPL-3](https://www.gnu.org/licenses/lgpl-3.0.html).

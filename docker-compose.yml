@@ -1,9 +1,9 @@
-version: "3.8"
+name: clearfilters-19
 
 services:
   db19:
     image: postgres:16
-    container_name: postgres19_clear_all_filters
+    container_name: clearfilters-pg-19
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: odoo
@@ -16,16 +16,20 @@ services:
     restart: unless-stopped
 
   odoo19:
-    image: odoo:19.0
-    container_name: odoo19_clear_all_filters
+    build: .
+    container_name: clearfilters-odoo-19
     depends_on:
       - db19
     ports:
       - "10419:8069"
+    environment:
+      HOST: db19
+      USER: odoo
+      PASSWORD: odoo
     volumes:
       - odoo_data:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./addons:/mnt/extra-addons
+      - ./addons/no_clear_all_filters:/mnt/extra-addons/no_clear_all_filters
     restart: unless-stopped
 
 volumes:

@@ -41,7 +41,7 @@ export function clearAllFilters(searchModel) {
     }
 }
 
-patch(SearchBar.prototype, {
+patch(SearchBar.prototype, "no_clear_all_filters.SearchBar", {
     get hasActiveFilters() {
         return hasActiveFilters(this.env.searchModel);
     },

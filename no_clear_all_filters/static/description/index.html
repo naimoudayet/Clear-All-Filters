@@ -7,6 +7,7 @@
         <span style="display: inline-block; background-color: #5A3A52; border: 1px solid #8A6A80; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">Odoo 18</span>
         <span style="display: inline-block; background-color: #00A09D; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">FREE</span>
         <span style="display: inline-block; background-color: #FF7F4F; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">Zero Config</span>
+        <span style="display: inline-block; background-color: #5A3A52; border-radius: 20px; padding: 5px 16px; font-size: 14px; color: #ffffff; margin: 0 4px;">8 Languages</span>
     </div>
 
     <!-- PROBLEM / SOLUTION -->
@@ -42,7 +43,7 @@
     </div>
 
     <!-- FEATURE GRID -->
-    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
+    <div style="background-color: #F8F5F7; padding: 48px 32px; border-radius: 8px;">
         <div class="container" style="text-align: center;">
             <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px;">Four Things It Does Well</h2>
             <p style="color: #475569; font-size: 16px; margin-bottom: 32px;">Lightweight, focused, no configuration.</p>
@@ -78,7 +79,7 @@
                 </div>
             </div>
 
-            <p style="color: #94A3B8; font-size: 14px; margin-top: 8px;">Uses Odoo's native <code>searchModel.deactivateGroup()</code> + <code>clearQuery()</code>. No private API.</p>
+            <p style="color: #94A3B8; font-size: 14px; margin-top: 8px;">Uses Odoo's native <em>searchModel.deactivateGroup()</em> + <em>clearQuery()</em>. No private API.</p>
         </div>
     </div>
 
@@ -115,7 +116,7 @@
     </div>
 
     <!-- HOW IT WORKS -->
-    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
+    <div style="background-color: #F8F5F7; padding: 48px 32px; border-radius: 8px;">
         <div class="container" style="text-align: center;">
             <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px;">How It Works</h2>
 
@@ -131,7 +132,7 @@
                     <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 10px; padding: 24px; text-align: center; height: 100%;">
                         <div style="font-size: 32px; margin-bottom: 8px; color: #714B67; font-weight: 700;">2</div>
                         <strong>Click Clear All</strong>
-                        <p style="font-size: 14px; color: #64748B; margin-top: 8px;">A single click deactivates every facet through Odoo's native <code>searchModel</code> API and clears any typed query.</p>
+                        <p style="font-size: 14px; color: #64748B; margin-top: 8px;">A single click deactivates every facet through Odoo's native <em>searchModel</em> API and clears any typed query.</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-12 mb-4">
@@ -155,8 +156,8 @@
                 <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 10px; padding: 24px; height: 100%;">
                     <p style="font-size: 13px; font-weight: 600; color: #94A3B8; margin: 0 0 8px; text-transform: uppercase;">Step 1 - addons path</p>
                     <strong style="color: #714B67;">Drop the module in</strong>
-                    <div style="background-color: #2D2233; color: #ffffff; padding: 12px 16px; border-radius: 6px; margin-top: 12px; font-family: monospace; font-size: 14px;">cp -r no_clear_all_filters /path/to/addons/</div>
-                    <p style="font-size: 13px; color: #64748B; margin-top: 12px;">Place the <code>no_clear_all_filters</code> folder in any directory listed in your Odoo <code>addons_path</code>.</p>
+                    <pre style="background-color: #2D2233; color: #ffffff; padding: 12px 16px; border-radius: 6px; margin-top: 12px; font-size: 14px; overflow-x: auto;">cp -r no_clear_all_filters /path/to/addons/</pre>
+                    <p style="font-size: 13px; color: #64748B; margin-top: 12px;">Place the <em>no_clear_all_filters</em> folder in any directory listed in your Odoo <em>addons_path</em>.</p>
                 </div>
             </div>
             <div class="col-md-6 col-12 mb-4">
@@ -170,7 +171,7 @@
     </div>
 
     <!-- WORKS WITH -->
-    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
+    <div style="background-color: #F8F5F7; padding: 48px 32px; border-radius: 8px;">
         <div class="container" style="text-align: center;">
             <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px;">Works With Every Search Bar</h2>
             <p style="color: #475569; font-size: 15px; margin-bottom: 32px;">No allow-list. No per-view setup. The OWL patch extends Odoo's standard SearchBar component.</p>
@@ -212,6 +213,66 @@
         </div>
     </div>
 
+
+    <!-- LANGUAGES -->
+    <div class="container py-5">
+        <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 8px; text-align: center;">Available in 8 Languages</h2>
+        <p style="color: #475569; font-size: 15px; margin-bottom: 32px; text-align: center;">The button speaks your team's language. Each user sees the label and tooltip in their own Odoo language setting - no extra setup.</p>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="us" src="flags/us.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">English (en_US)</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="fr" src="flags/fr.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">Fran&ccedil;ais (fr)</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="es" src="flags/es.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">Espa&ntilde;ol (es)</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="de" src="flags/de.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">Deutsch (de)</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="nl" src="flags/nl.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">Nederlands (nl)</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="br" src="flags/br.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">Portugu&ecirc;s (pt_BR)</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="it" src="flags/it.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">Italiano (it)</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 14px; text-align: center;">
+                    <img width="32" height="22" alt="cn" src="flags/cn.png" style="display: block; margin: 0 auto 6px; border-radius: 2px;">
+                    <strong style="color: #714B67;">&#20013;&#25991; (zh_CN)</strong>
+                </div>
+            </div>
+        </div>
+
+        <p style="color: #94A3B8; font-size: 13px; text-align: center; margin-top: 8px; max-width: 640px; margin-left: auto; margin-right: auto;">Standard PO translation files under <em>i18n/</em>. Regional variants (<em>fr_BE</em>, <em>nl_BE</em>) inherit from the base language. Need another language? Drop a <em>.po</em> file in <em>i18n/</em> and reinstall.</p>
+    </div>
+
     <!-- LIMITATIONS / HONEST SCOPE -->
     <div class="container py-5">
         <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 16px; text-align: center;">What This Module Doesn't Do</h2>
@@ -222,7 +283,7 @@
                 <div style="background-color: #ffffff; border: 1px solid #E8DDE5; border-radius: 8px; padding: 16px 20px;">
                     <strong style="color: #dc3545;">&#10007;</strong>&nbsp;
                     <strong>Default-domain reset</strong>
-                    <p style="font-size: 13px; color: #64748B; margin: 6px 0 0;">Filters declared in the action's <code>context</code> as defaults reapply on the next render. The button clears user-applied facets, not action-level defaults.</p>
+                    <p style="font-size: 13px; color: #64748B; margin: 6px 0 0;">Filters declared in the action's <em>context</em> as defaults reapply on the next render. The button clears user-applied facets, not action-level defaults.</p>
                 </div>
             </div>
             <div class="col-md-6 col-12 mb-3">
@@ -250,14 +311,14 @@
                 <div style="background-color: #FFF3CD; border: 1px solid #FFEEBA; border-radius: 8px; padding: 16px 20px;">
                     <strong style="color: #856404;">&#9888;</strong>&nbsp;
                     <strong>Heavy-customization themes</strong>
-                    <p style="font-size: 13px; color: #856404; margin: 6px 0 0;">The button is appended inside the standard <code>o_cp_searchview</code> container. A theme that replaces the search bar entirely will need its own integration point.</p>
+                    <p style="font-size: 13px; color: #856404; margin: 6px 0 0;">The button is appended inside the standard <em>o_cp_searchview</em> container. A theme that replaces the search bar entirely will need its own integration point.</p>
                 </div>
             </div>
             <div class="col-md-6 col-12 mb-3">
                 <div style="background-color: #FFF3CD; border: 1px solid #FFEEBA; border-radius: 8px; padding: 16px 20px;">
                     <strong style="color: #856404;">&#9888;</strong>&nbsp;
                     <strong>Other SearchBar-patching modules</strong>
-                    <p style="font-size: 13px; color: #856404; margin: 6px 0 0;">Two modules can each <code>patch()</code> the SearchBar prototype safely, but conflicting renders of the same xpath may collide. Test once if your stack already extends the search bar.</p>
+                    <p style="font-size: 13px; color: #856404; margin: 6px 0 0;">Two modules can each <em>patch()</em> the SearchBar prototype safely, but conflicting renders of the same xpath may collide. Test once if your stack already extends the search bar.</p>
                 </div>
             </div>
         </div>
@@ -268,7 +329,7 @@
         <div class="container">
             <h2 style="color: #D4B8CF; font-size: 22px; font-weight: 700; margin-bottom: 12px; text-align: center;">&#128737; A Note on Odoo's searchModel</h2>
             <p style="color: #BBA8B5; font-size: 14px; line-height: 1.7; margin: 0; max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;">
-                The button drives the same public <code>searchModel</code> API that Odoo's own facet-close buttons use - <code>deactivateGroup()</code> per facet, then <code>clearQuery()</code> for the typed text. Notifications are batched with the <code>blockNotification</code> flag so the view re-renders only once at the end. As long as Odoo keeps that public API stable, the module keeps working without per-version forks. Each version branch ships its own JS test suite to catch the day that contract changes.
+                The button drives the same public <em>searchModel</em> API that Odoo's own facet-close buttons use - <em>deactivateGroup()</em> per facet, then <em>clearQuery()</em> for the typed text. Notifications are batched with the <em>blockNotification</em> flag so the view re-renders only once at the end. As long as Odoo keeps that public API stable, the module keeps working without per-version forks. Each version branch ships its own JS test suite to catch the day that contract changes.
             </p>
         </div>
     </div>
@@ -284,29 +345,29 @@
             </div>
             <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
                 <strong style="color: #714B67;">Will it clear the action's default filter?</strong>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">User-applied facets are cleared. Filters declared in the action's <code>context</code> as defaults reapply on the next render - that's a server-side decision, not a client-side facet.</p>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">User-applied facets are cleared. Filters declared in the action's <em>context</em> as defaults reapply on the next render - that's a server-side decision, not a client-side facet.</p>
             </div>
             <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
                 <strong style="color: #714B67;">Does it work in pivot, graph, and kanban views?</strong>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">Yes. The patch is on the shared <code>SearchBar</code> component, so every view that uses Odoo's standard search bar gets the button.</p>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">Yes. The patch is on the shared <em>SearchBar</em> component, so every view that uses Odoo's standard search bar gets the button.</p>
             </div>
             <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
                 <strong style="color: #714B67;">What about Odoo 16 / 17 / 18?</strong>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">This branch targets Odoo 18 and uses the v18 <code>searchModel</code> API surface. Earlier-version branches will follow if there's demand.</p>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">This branch targets Odoo 18 and uses the v18 <em>searchModel</em> API surface. Earlier-version branches will follow if there's demand.</p>
             </div>
             <div style="border-bottom: 1px solid #E8DDE5; padding: 16px 0;">
                 <strong style="color: #714B67;">Does it conflict with other modules that extend the search bar?</strong>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">Multiple modules can <code>patch()</code> <code>SearchBar.prototype</code> simultaneously - that's the supported Odoo pattern. Conflicts only arise if another module replaces the same xpath inside <code>o_cp_searchview</code>.</p>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">Multiple modules can <em>patch()</em> <em>SearchBar.prototype</em> simultaneously - that's the supported Odoo pattern. Conflicts only arise if another module replaces the same xpath inside <em>o_cp_searchview</em>.</p>
             </div>
             <div style="padding: 16px 0;">
                 <strong style="color: #714B67;">Will this break with future Odoo updates?</strong>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">It uses the public <code>searchModel.deactivateGroup()</code> and <code>clearQuery()</code> methods. As long as those stay in their current form, the module keeps working. The shipped JS test suite catches regressions early.</p>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0;">It uses the public <em>searchModel.deactivateGroup()</em> and <em>clearQuery()</em> methods. As long as those stay in their current form, the module keeps working. The shipped JS test suite catches regressions early.</p>
             </div>
         </div>
     </div>
 
     <!-- TECHNICAL DETAILS -->
-    <div style="background-color: #F8F5F7; padding: 48px 0; border-radius: 8px;">
+    <div style="background-color: #F8F5F7; padding: 48px 32px; border-radius: 8px;">
         <div class="container">
             <h2 style="color: #714B67; font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center;">Technical Details</h2>
             <div style="max-width: 600px; margin: 0 auto;">
@@ -316,7 +377,7 @@
                 </div>
                 <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
                     <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Version</strong></div>
-                    <div class="col-md-7 col-12" style="text-align: left;">18.0.1.0.0</div>
+                    <div class="col-md-7 col-12" style="text-align: left;">18.0.1.1.0</div>
                 </div>
                 <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
                     <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Depends on</strong></div>
@@ -332,18 +393,22 @@
                 </div>
                 <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
                     <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Mechanism</strong></div>
-                    <div class="col-md-7 col-12" style="text-align: left;"><code>patch()</code> on <code>SearchBar.prototype</code> + xpath into <code>o_cp_searchview</code></div>
+                    <div class="col-md-7 col-12" style="text-align: left;"><em>patch()</em> on <em>SearchBar.prototype</em> + xpath into <em>o_cp_searchview</em></div>
                 </div>
-                <div class="row" style="padding: 10px 0;">
+                <div class="row" style="border-bottom: 1px solid #E8DDE5; padding: 10px 0;">
                     <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Test coverage</strong></div>
                     <div class="col-md-7 col-12" style="text-align: left;">Hoot/QUnit JS suite (deactivate + clearQuery) + HttpCase wrapper</div>
+                </div>
+                <div class="row" style="padding: 10px 0;">
+                    <div class="col-md-5 col-12" style="text-align: left;"><strong style="color: #714B67;">Languages</strong></div>
+                    <div class="col-md-7 col-12" style="text-align: left;">EN, FR, ES, DE, NL, PT-BR, IT, ZH-CN</div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- CROSS-PROMOTION -->
-    <div style="background-color: #2D2233; padding: 48px 0; border-radius: 8px;">
+    <div style="background-color: #2D2233; padding: 48px 32px; border-radius: 8px;">
         <div class="container" style="text-align: center;">
             <h2 style="color: #D4B8CF; font-size: 28px; font-weight: 700; margin-bottom: 8px;">More Modules by Naim OUDAYET</h2>
             <p style="color: #BBA8B5; font-size: 16px; margin-bottom: 32px;">Production-ready Odoo modules. Tested. Documented.</p>

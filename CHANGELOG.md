@@ -5,6 +5,22 @@ All notable changes to **Clear All Filters Button** for Odoo 16.0 are documented
 This file follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format.
 Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>` scheme.
 
+## [16.0.1.2.0] - 2026-05-13
+
+### Added
+- **Arabic translation** (`ar`) — 9 languages total. All 5 msgids covered (manifest `name` / `summary` / `description`, button label "Clear All", tooltip "Clear all active filters, group-bys, and favorites").
+- New language card with AR flag in the "Available in 9 Languages" section of the App Store description.
+- `ar` row in the Languages table in README.
+- `ar.png` added under `static/description/flags/` (sourced from the shared `_shared/flags/` library).
+- New **"Translated into 9 Languages"** feature bullet in README + Languages section table.
+
+### Changed
+- Hero "8 Languages" badge updated to "9 Languages" and section header from "Available in 8 Languages" to "Available in 9 Languages".
+- Language flag grid switched from 4-per-line (`col-md-3 col-sm-4 col-6`) to 3-per-line (`col-md-4 col-sm-6 col-12`) to match the portfolio standard set by PDF-Preview-Before-Print.
+- Trailing "Standard PO translation files…" technical footnote removed from the Languages section (not buyer-facing).
+- Technical Details: version row bumped + Languages row appended with `AR`.
+- Module version bumped from `16.0.1.1.0` to `16.0.1.2.0` (semver minor for new language).
+
 ## [16.0.1.1.0] - 2026-05-12
 
 ### Added

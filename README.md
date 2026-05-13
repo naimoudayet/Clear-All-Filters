@@ -1,78 +1,68 @@
-# Clear All Filters Button — Odoo 19
+# Clear All Filters Button
 
-One-click button to wipe every active filter, group-by, favorite, and typed query from the search bar. Pure frontend OWL patch on the standard `SearchBar` component. Zero configuration, zero server impact.
+One-click button next to the standard Odoo search bar that wipes every active filter, group-by, favorite, and typed query. Pure frontend OWL patch — no Python models, no RPC, no server impact. Zero configuration. Available in 9 languages.
 
-## Features
+## Choose Your Odoo Version
 
-- **One-Click Reset** — clears every active filter, group-by, favorite, and typed query in a single click.
-- **Auto-Hide** — the button only appears when the search bar has something to clear.
-- **Every View** — list, kanban, pivot, graph, calendar, activity, and any custom view that uses Odoo's standard search bar.
-- **Native API** — drives `searchModel.deactivateGroup()` + `clearQuery()`. No private API, no monkey-patches.
-- **Single Re-Render** — uses `blockNotification` to batch facet deactivations into one view refresh.
-- **Pure Frontend** — no Python models, no RPC, no database changes.
-- **Zero Configuration** — install and the button is there everywhere.
+Each Odoo major version lives on its own branch. Pick the one matching your server.
 
-## How It Works
+| Odoo Version | Stable | Development |
+|---|---|---|
+| 19.0 | [`19.0`](../../tree/19.0) | [`19.0.dev`](../../tree/19.0.dev) |
+| 18.0 | [`18.0`](../../tree/18.0) | [`18.0.dev`](../../tree/18.0.dev) |
+| 17.0 | [`17.0`](../../tree/17.0) | [`17.0.dev`](../../tree/17.0.dev) |
+| 16.0 | [`16.0`](../../tree/16.0) | [`16.0.dev`](../../tree/16.0.dev) |
 
-1. The module patches `SearchBar.prototype` to add a `hasActiveFilters` getter and a `clearAllFilters` method.
-2. A QWeb xpath inserts a button inside the standard `o_cp_searchview` container, conditionally rendered when `hasActiveFilters` is true.
-3. On click, `clearAllFilters` iterates `searchModel.facets`, calls `deactivateGroup(facet.groupId)` on each (with `blockNotification = true` to suppress per-facet re-renders), then `clearQuery()` to wipe any typed text.
-4. One final notification fires, the view re-renders once, the button hides itself again until the next facet stack.
+The technical module name is **`no_clear_all_filters`** on every version branch.
 
-## Technical Details
+## What It Does
 
-| Item                 | Value                                                       |
-|----------------------|-------------------------------------------------------------|
-| Odoo Version         | 19.0                                                        |
-| License              | LGPL-3                                                      |
-| Dependencies         | `web`                                                       |
-| Python Dependencies  | None                                                        |
-| Type                 | Pure Frontend (OWL patch on `SearchBar.prototype`)          |
-| Mechanism            | `searchModel.deactivateGroup()` + `clearQuery()`            |
-| Configuration        | None (zero-config)                                          |
+- **One-Click Reset** — Wipes every active filter, group-by, favorite, and typed query in a single click. No partial state, no per-chip clicking.
+- **Auto-Hide** — The button only appears when the search bar has something to clear. A clean view stays clean.
+- **Every View** — List, kanban, pivot, graph, calendar, activity, and any custom view that uses Odoo's standard search bar.
+- **Native API** — Drives `searchModel.deactivateGroup()` + `clearQuery()`. No private API, no monkey-patches.
+- **Single Re-Render** — `blockNotification` batches facet deactivations into one view refresh.
+- **Pure Frontend** — No Python models, no RPC, no database changes.
+- **Zero Configuration** — Install and the button is there everywhere.
+- **Translated into 9 Languages** — English, French, Spanish, German, Dutch, Portuguese (BR), Italian, Chinese (Simplified), Arabic. Each user sees the button label and tooltip in their own Odoo language.
 
-## Installation
+## Quick Install
 
-1. Place the `no_clear_all_filters` folder in your Odoo addons directory.
-2. Restart the Odoo server (or run with `-u no_clear_all_filters` on first install).
-3. Go to **Apps**, remove the *Apps* filter, search for **"Clear All Filters"**, and click **Install**.
+1. Check out the branch matching your Odoo version (see table above).
+2. Copy the `no_clear_all_filters/` folder into a directory listed in your Odoo `addons_path`.
+3. **Apps → Update Apps List → search "Clear All Filters" → Install**.
 
-## Configuration
+Full per-version installation, configuration, and test instructions live in each branch's own README.
 
-None. Once installed, the button appears next to the search bar on every view that has one. It auto-hides when there are no active facets.
+## Languages
 
-## Docker Setup (Development)
+Ships with translations for:
 
-```bash
-docker-compose up -d
-```
+| Code     | Language                |
+|----------|-------------------------|
+| `en_US`  | English (source)        |
+| `fr`     | French                  |
+| `es`     | Spanish                 |
+| `de`     | German                  |
+| `nl`     | Dutch                   |
+| `pt_BR`  | Portuguese (Brazil)     |
+| `it`     | Italian                 |
+| `zh_CN`  | Chinese (Simplified)    |
+| `ar`     | Arabic                  |
 
-- Odoo: http://localhost:10419
-- PostgreSQL: internal `db19` service (port `7419` exposed for tooling)
-
-The provided `Dockerfile` installs Chromium and `python3-websocket` so Odoo's `HttpCase.browser_js` can run the JS test suite headlessly.
-
-## Running Tests
-
-```bash
-docker exec -it clearfilters-odoo-19 \
-  odoo --test-enable --stop-after-init \
-  -d test_db -i no_clear_all_filters \
-  --test-tags no_clear_all_filters_js
-```
-
-Runs the Hoot JS specs under `static/tests/` plus the `HttpCase` wrapper in `tests/test_js_suite.py`.
+Regional variants (e.g. `fr_BE`, `nl_BE`) inherit from the base language via Odoo's standard fallback. To add a new language, drop a `<code>.po` file into the branch's `i18n/` folder — the canonical template is `i18n/no_clear_all_filters.pot`.
 
 ## Compatibility
 
-- Odoo 19.0 Community
-- Odoo 19.0 Enterprise
-- Works with every view that uses Odoo's standard search bar (list, kanban, pivot, graph, calendar, activity, custom views)
+Works on **Odoo 16.0 through 19.0**, Community and Enterprise editions. Compatible with every view that uses Odoo's standard search bar (list, kanban, pivot, graph, calendar, activity, custom views). No Python dependencies.
+
+## Repository Layout
+
+This `main` branch is a landing page only. Module code, the development Docker stack, and per-version tests live on the per-version branches above.
 
 ## Author
 
-**Naim OUDAYET**
-Odoo developer based in Tunisia.
+**Naim OUDAYET** — Odoo developer based in Tunisia.
 
 - Website: [oudayet.com](https://www.oudayet.com)
 - Email: contact@oudayet.com
@@ -80,4 +70,4 @@ Odoo developer based in Tunisia.
 
 ## License
 
-This module is licensed under [LGPL-3](https://www.gnu.org/licenses/lgpl-3.0.html).
+[LGPL-3](https://www.gnu.org/licenses/lgpl-3.0.html).

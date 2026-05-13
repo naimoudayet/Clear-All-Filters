@@ -11,6 +11,7 @@ One-click button to wipe every active filter, group-by, favorite, and typed quer
 - **Single Re-Render** — uses `blockNotification` to batch facet deactivations into one view refresh.
 - **Pure Frontend** — no Python models, no RPC, no database changes.
 - **Zero Configuration** — install and the button is there everywhere.
+- **Translated into 9 Languages** — English, French, Spanish, German, Dutch, Portuguese (BR), Italian, Chinese (Simplified), Arabic. Each user sees the button label and tooltip in their own Odoo language.
 
 ## How It Works
 
@@ -40,6 +41,22 @@ One-click button to wipe every active filter, group-by, favorite, and typed quer
 ## Configuration
 
 None. Once installed, the button appears next to the search bar on every view that has one. It auto-hides when there are no active facets.
+
+## Languages
+
+| Code  | Language               |
+|-------|------------------------|
+| en    | English (source)       |
+| fr    | French                 |
+| es    | Spanish                |
+| de    | German                 |
+| nl    | Dutch                  |
+| pt_BR | Portuguese (Brazil)    |
+| it    | Italian                |
+| zh_CN | Chinese (Simplified)   |
+| ar    | Arabic                 |
+
+Translations are loaded automatically when the matching language is active in Odoo. Each user sees the button label and tooltip in their preferred language.
 
 ## Compatibility
 

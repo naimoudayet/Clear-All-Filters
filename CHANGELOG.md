@@ -5,6 +5,21 @@ All notable changes to **Clear All Filters Button** for Odoo 19.0 are documented
 This file follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format.
 Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>` scheme.
 
+## [19.0.1.2.0] - 2026-05-13
+
+### Added
+- **Arabic translation** (`ar.po`) — module is now translated into 9 languages.
+- Arabic flag card in App Store description (`static/description/flags/ar.png`).
+- `Translated into 9 Languages` bullet in README Features list.
+- `Languages` section table in README listing all 9 supported languages.
+
+### Changed
+- App Store hero badge updated from `8 Languages` to `9 Languages`.
+- App Store flag grid switched from 4-per-row (`col-md-3 col-sm-4 col-6`) to 3-per-row (`col-md-4 col-sm-6 col-12`) so 9 cards lay out evenly across 3 rows.
+- Dropped the "Standard PO translation files…" footnote from the App Store description — gettext mechanics are not buyer-facing.
+- Technical Details `Languages` row appended `, AR`.
+- Module version bumped from `19.0.1.1.0` to `19.0.1.2.0`.
+
 ## [19.0.1.1.0] - 2026-05-12
 
 ### Added

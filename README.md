@@ -11,6 +11,7 @@ One-click button to wipe every active filter, group-by, favorite, and typed quer
 - **Single Re-Render** — uses `blockNotification` to batch facet deactivations into one view refresh.
 - **Pure Frontend** — no Python models, no RPC, no database changes.
 - **Zero Configuration** — install and the button is there everywhere.
+- **Translated into 9 Languages** — English, French, Spanish, German, Dutch, Portuguese (BR), Italian, Chinese (Simplified), Arabic. Each user sees the button label and tooltip in their own Odoo language.
 
 ## How It Works
 
@@ -62,6 +63,24 @@ docker exec -it clearfilters-odoo-17 \
 ```
 
 Runs the QUnit JS specs under `static/tests/` plus the `HttpCase` wrapper in `tests/test_js_suite.py`.
+
+## Languages
+
+Ships with translations for:
+
+| Code     | Language                |
+|----------|-------------------------|
+| `en_US`  | English (source)        |
+| `fr`     | French                  |
+| `es`     | Spanish                 |
+| `de`     | German                  |
+| `nl`     | Dutch                   |
+| `pt_BR`  | Portuguese (Brazil)     |
+| `it`     | Italian                 |
+| `zh_CN`  | Chinese (Simplified)    |
+| `ar`     | Arabic                  |
+
+Each user sees the button label + tooltip in the language set in **Preferences → Language**. Regional variants (e.g. `fr_BE`, `nl_BE`) inherit from the base language via Odoo's standard fallback. To add a new language, drop a `<code>.po` file into `i18n/` — the canonical template is `i18n/no_clear_all_filters.pot`.
 
 ## Compatibility
 

@@ -1,35 +1,30 @@
 // Copyright 2026 Naim OUDAYET
 // License LGPL-3
+//
+// Tuned to Odoo 16's control-panel small-button conventions:
+//   - Bootstrap 5 small-button tokens for padding / font-size / radius
+//   - $spacers map for margins (RTL auto-flipped by Odoo's asset pipeline)
+//   - flex-shrink: 0 so the button never gets squeezed when the search bar
+//     is full of chips, and never pushes / overlaps siblings in the
+//     .o_cp_searchview flex row
+// Red outline + red fill on hover come from .btn-outline-danger directly.
 
 .o_no_clear_all_filters_btn {
-    // Match the search bar height (form-control uses ~calc(1.5em + .5rem + 2px))
-    // We use align-self + same padding pattern to stay vertically aligned
-    align-self: stretch;
-    white-space: nowrap;
-    font-size: 0.85rem;
-    padding: 0 12px;
-    border-radius: 0 4px 4px 0;
-    border-left: 0;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-
-    &:hover {
-        background-color: #dc3545;
-        color: #fff;
-        border-color: #dc3545;
-    }
+    align-self: center;
+    flex-shrink: 0;
+    margin-left: map-get($spacers, 2);
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+    font-size: $btn-font-size-sm;
+    border-radius: $btn-border-radius-sm;
+    white-space: nowrap;
 
     .fa {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
-    // On small screens: make button full width below search bar
-    @media (max-width: 767.98px) {
-        border-radius: 4px;
-        border-left: 1px solid #dc3545;
-        margin-top: 4px;
-        margin-left: 0;
-        justify-content: center;
-        width: 100%;
+    @include media-breakpoint-down(md) {
+        margin-left: map-get($spacers, 1);
     }
 }

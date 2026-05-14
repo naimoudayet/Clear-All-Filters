@@ -10,7 +10,8 @@
                     class="btn btn-outline-danger o_no_clear_all_filters_btn d-print-none"
                     t-on-click="clearAllFilters"
                     title="Clear all active filters, group-bys, and favorites">
-                <i class="fa fa-times-circle me-1"/>Clear All
+                <i class="fa fa-times-circle"/>
+                <span class="d-none d-md-inline ms-1">Clear All</span>
             </button>
         </xpath>
     </t>

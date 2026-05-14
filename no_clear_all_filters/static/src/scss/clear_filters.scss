@@ -1,35 +1,26 @@
 // Copyright 2026 Naim OUDAYET
 // License LGPL-3
+//
+// Odoo 17 wraps the search bar in a Bootstrap .input-group, which would
+// normally glue adjacent buttons flush against the search box (squared
+// inner corners, shared border, -1px overlap margin). For our
+// destructive "Clear All" action we want the button to read as a
+// SEPARATE, deliberate action — not part of the search input — so we
+// detach it with an 8px gap and restore full border-radius.
+//
+// !important is needed because Bootstrap's input-group rules use a
+// chained :not() selector that out-specifies a single class.
+//
+// Responsive: the "Clear All" label is wrapped in a <span> with
+// `d-none d-md-inline` in the XML, so it collapses to icon-only on
+// < md viewports (matches v17's view-switcher / breadcrumb collapse
+// pattern). flex: 0 0 auto stops the button from competing with the
+// .form-control sibling for flex growth.
 
 .o_no_clear_all_filters_btn {
-    // Match the search bar height (form-control uses ~calc(1.5em + .5rem + 2px))
-    // We use align-self + same padding pattern to stay vertically aligned
-    align-self: stretch;
-    white-space: nowrap;
-    font-size: 0.85rem;
-    padding: 0 12px;
-    border-radius: 0 4px 4px 0;
-    border-left: 0;
-    display: flex;
+    flex: 0 0 auto;
+    display: inline-flex;
     align-items: center;
-
-    &:hover {
-        background-color: #dc3545;
-        color: #fff;
-        border-color: #dc3545;
-    }
-
-    .fa {
-        font-size: 0.8rem;
-    }
-
-    // On small screens: make button full width below search bar
-    @media (max-width: 767.98px) {
-        border-radius: 4px;
-        border-left: 1px solid #dc3545;
-        margin-top: 4px;
-        margin-left: 0;
-        justify-content: center;
-        width: 100%;
-    }
+    margin-left: map-get($spacers, 2) !important;
+    border-radius: $btn-border-radius !important;
 }

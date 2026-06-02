@@ -5,6 +5,11 @@ All notable changes to **Clear All Filters Button** for Odoo 19.0 are documented
 This file follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format.
 Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>` scheme.
 
+## [19.0.1.2.1] - 2026-06-02
+
+### Changed
+- Removed the cross-promotion ("More Modules") section from the store description (index.html).
+
 ## [19.0.1.2.0] - 2026-05-13
 
 ### Added

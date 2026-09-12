@@ -1,5 +1,10 @@
 # Clear All Filters Button — Odoo 16
 
+![License](https://img.shields.io/badge/license-LGPL--3-blue)
+![Odoo](https://img.shields.io/badge/Odoo-16.0-blueviolet)
+![Languages](https://img.shields.io/badge/languages-9-orange)
+![Version](https://img.shields.io/badge/version-16.0.1.2.1-informational)
+
 One-click button to wipe every active filter, group-by, favorite, and typed query from the search bar. Pure frontend OWL patch on the standard `SearchBar` component. Zero configuration, zero server impact.
 
 ## Features
@@ -25,6 +30,7 @@ One-click button to wipe every active filter, group-by, favorite, and typed quer
 | Item                 | Value                                                       |
 |----------------------|-------------------------------------------------------------|
 | Odoo Version         | 16.0                                                        |
+| Module Version      | 16.0.1.2.1                                                  |
 | License              | LGPL-3                                                      |
 | Dependencies         | `web`                                                       |
 | Python Dependencies  | None                                                        |

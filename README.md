@@ -1,5 +1,11 @@
 # Clear All Filters Button
 
+![License](https://img.shields.io/badge/license-LGPL--3-blue)
+![Odoo](https://img.shields.io/badge/Odoo-16.0%20%7C%2017.0%20%7C%2018.0%20%7C%2019.0-blueviolet)
+![Languages](https://img.shields.io/badge/languages-9-orange)
+
+**Author: Naim OUDAYET**
+
 One-click button next to the standard Odoo search bar that wipes every active filter, group-by, favorite, and typed query. Pure frontend OWL patch — no Python models, no RPC, no server impact. Zero configuration. Available in 9 languages.
 
 ## Choose Your Odoo Version

@@ -26,10 +26,11 @@ services:
       HOST: db19
       USER: odoo
       PASSWORD: odoo
+      PYTHONDONTWRITEBYTECODE: "1"   # else the bind mount fills the tree with __pycache__
     volumes:
       - odoo_data:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./addons/no_clear_all_filters:/mnt/extra-addons/no_clear_all_filters
+      - ./no_clear_all_filters:/mnt/extra-addons/no_clear_all_filters
     restart: unless-stopped
 
 volumes:

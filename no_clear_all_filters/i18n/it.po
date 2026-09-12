@@ -9,11 +9,12 @@ msgstr ""
 "POT-Creation-Date: 2026-05-12 00:00+0000\n"
 "PO-Revision-Date: 2026-05-12 00:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: no_clear_all_filters
 #: model:ir.module.module,description:no_clear_all_filters.module_meta_information
@@ -23,15 +24,16 @@ msgid ""
 "s in one click. Uses Odoo's native searchModel API. Pure frontend, zer"
 "o server impact, no configuration."
 msgstr ""
-"Knop Alle Filters Wissen voegt een enkele knop toe naast de zoekbalk d"
-"ie alle actieve filters, groeperingen, favorieten en getypte zoekopdra"
-"chten in één klik verwijdert. Gebruikt de native searchModel-API van O"
-"doo. Pure frontend, geen serverbelasting, geen configuratie."
+"Pulsante Cancella Tutti i Filtri aggiunge un singolo pulsante accanto "
+"alla barra di ricerca che rimuove tutti i filtri, raggruppamenti, pref"
+"eriti e query digitate attivi in un clic. Utilizza l'API nativa search"
+"Model di Odoo. Frontend puro, nessun impatto sul server, nessuna confi"
+"gurazione."
 
 #. module: no_clear_all_filters
 #: model:ir.module.module,shortdesc:no_clear_all_filters.module_meta_information
 msgid "Clear All Filters Button"
-msgstr "Knop Alle Filters Wissen"
+msgstr "Pulsante Cancella Tutti i Filtri"
 
 #. module: no_clear_all_filters
 #: model:ir.module.module,summary:no_clear_all_filters.module_meta_information
@@ -39,17 +41,17 @@ msgid ""
 "One-click button to clear all active filters, group-bys, favorites, an"
 "d typed queries from the search bar"
 msgstr ""
-"Eén-klik knop om alle actieve filters, groeperingen, favorieten en get"
-"ypte zoekopdrachten uit de zoekbalk te wissen"
+"Pulsante a un clic per cancellare tutti i filtri attivi, raggruppament"
+"i, preferiti e query digitate dalla barra di ricerca"
 
 #. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear All"
-msgstr "Alles Wissen"
+msgstr "Cancella Tutto"
 
 #. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear all active filters, group-bys, and favorites"
-msgstr "Alle actieve filters, groeperingen en favorieten wissen"
+msgstr "Cancella tutti i filtri, raggruppamenti e preferiti attivi"

@@ -72,7 +72,7 @@ Translations are loaded automatically when the matching language is active in Od
 
 ## Development
 
-For the development stack (Docker compose with Postgres + Odoo + headless Chrome for tests), see the [`18.0.dev`](https://github.com/naimoudayet/Clear-All-Filters/tree/18.0.dev) branch.
+For the development stack (Docker compose with Postgres + Odoo + headless Chrome for tests), see the [`18.0-dev`](https://github.com/naimoudayet/Clear-All-Filters/tree/18.0-dev) branch.
 
 ## Author
 

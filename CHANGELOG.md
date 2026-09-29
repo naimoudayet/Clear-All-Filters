@@ -11,6 +11,8 @@ Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>
 - Ported to Odoo 20 (official `odoo:20` image; full test suite passes). The
   button's icon uses Odoo 20's icon set; the Font Awesome icon it had does not
   exist on Odoo 20.
+- App Store listing: the three screenshots were retaken on Odoo 20 and now carry
+  alt text.
 
 ### Fixed
 - The Clear All button reads its state the Odoo 20 way. Odoo 20 templates reach
@@ -21,9 +23,6 @@ Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>
   draws the search bar as one rounded pill and strips the right padding of every
   part but the last, so the toggler, which is all padding, shrank to nothing and
   the Filters / Group By menu could not be opened while the button showed.
-
-### Listing
-- The three screenshots were retaken on Odoo 20 and now carry alt text.
 
 ## [19.0.1.2.1] - 2026-06-02
 

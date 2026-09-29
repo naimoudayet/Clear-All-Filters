@@ -22,6 +22,9 @@ Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>
   part but the last, so the toggler, which is all padding, shrank to nothing and
   the Filters / Group By menu could not be opened while the button showed.
 
+### Listing
+- The three screenshots were retaken on Odoo 20 and now carry alt text.
+
 ## [19.0.1.2.1] - 2026-06-02
 
 ### Changed

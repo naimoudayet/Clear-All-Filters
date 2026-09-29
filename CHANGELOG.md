@@ -17,6 +17,10 @@ Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>
   a component's fields through `this.`; left as they were, the button would
   never have appeared on Odoo 20. A new test mounts the real search bar and
   checks the button shows up with a facet and empties the bar in one click.
+- The search bar's filter toggler stays visible next to the button. Odoo 20
+  draws the search bar as one rounded pill and strips the right padding of every
+  part but the last, so the toggler, which is all padding, shrank to nothing and
+  the Filters / Group By menu could not be opened while the button showed.
 
 ## [19.0.1.2.1] - 2026-06-02
 

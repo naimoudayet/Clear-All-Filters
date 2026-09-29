@@ -7,7 +7,7 @@
 // if the template never renders the button (Odoo 20 resolves template names
 // through `this.`; a bare `hasActiveFilters` is simply undefined there).
 import { describe, expect, test } from "@odoo/hoot";
-import { click } from "@odoo/hoot-dom";
+import { click, queryFirst } from "@odoo/hoot-dom";
 import { animationFrame } from "@odoo/hoot-mock";
 import {
     defineModels,
@@ -53,6 +53,11 @@ describe("no_clear_all_filters / the Clear All button", () => {
         await mountBar({ search_default_yop: 1, search_default_by_foo: 1 });
         expect(".o_searchview_facet").toHaveCount(2);
         expect(".o_no_clear_all_filters_btn").toHaveCount(1);
+        // Odoo 20's pill strips the end padding of every non-last child: the
+        // filter toggler (no content, all padding) must not collapse to 0 px
+        // now that the button follows it.
+        const toggler = queryFirst(".o_searchview_dropdown_toggler");
+        expect(toggler.getBoundingClientRect().width).toBeGreaterThan(0);
 
         await click(".o_no_clear_all_filters_btn");
         await animationFrame();

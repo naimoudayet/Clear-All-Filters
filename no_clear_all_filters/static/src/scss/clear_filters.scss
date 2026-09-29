@@ -27,3 +27,24 @@
     margin-left: map-get($spacers, 2) !important;
     border-radius: $btn-border-radius !important;
 }
+
+// Odoo 20 draws the whole search bar as one pill (.input-group.rounded-pill)
+// and strips the inline-end padding and border of every child that is not
+// the last one, and the inline-start ones of every child that is not the
+// first. The filter toggler has no content of its own - its width IS its
+// padding - so once this button follows it, it collapses to zero width and
+// the Filters / Group By menu can no longer be opened. Give the toggler back
+// the end it has as the last child, and the button the start it loses as a
+// non-first child. One class more than core's selector; neither rule matches
+// on a search bar that is not a pill.
+.o_cp_searchview.input-group.rounded-pill {
+    > .o_searchview_dropdown_toggler:not(:last-child) {
+        padding-inline-end: $spacer;
+        border-inline-end: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    }
+
+    > .o_no_clear_all_filters_btn:not(:first-child) {
+        padding-inline-start: $spacer;
+        border-inline-start: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    }
+}

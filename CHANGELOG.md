@@ -12,6 +12,12 @@ Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>
   button's icon uses Odoo 20's icon set; the Font Awesome icon it had does not
   exist on Odoo 20.
 
+### Fixed
+- The Clear All button reads its state the Odoo 20 way. Odoo 20 templates reach
+  a component's fields through `this.`; left as they were, the button would
+  never have appeared on Odoo 20. A new test mounts the real search bar and
+  checks the button shows up with a facet and empties the bar in one click.
+
 ## [19.0.1.2.1] - 2026-06-02
 
 ### Changed

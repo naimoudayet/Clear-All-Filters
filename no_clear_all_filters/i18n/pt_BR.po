@@ -17,40 +17,40 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: no_clear_all_filters
-#: model:ir.module.module,description:no_clear_all_filters.module_meta_information
-msgid ""
-"Clear All Filters Button adds a single button next to the search bar t"
-"hat removes all active filters, group-bys, favorites, and typed querie"
-"s in one click. Uses Odoo's native searchModel API. Pure frontend, zer"
-"o server impact, no configuration."
-msgstr ""
-"Botão Limpar Todos os Filtros adiciona um único botão ao lado da barra"
-" de pesquisa que remove todos os filtros, agrupamentos, favoritos e co"
-"nsultas digitadas em um clique. Usa a API nativa searchModel do Odoo. "
-"Frontend puro, sem impacto no servidor, sem configuração."
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,shortdesc:no_clear_all_filters.module_meta_information
-msgid "Clear All Filters Button"
-msgstr "Botão Limpar Todos os Filtros"
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,summary:no_clear_all_filters.module_meta_information
-msgid ""
-"One-click button to clear all active filters, group-bys, favorites, an"
-"d typed queries from the search bar"
-msgstr ""
-"Botão de um clique para limpar todos os filtros, agrupamentos, favorit"
-"os e consultas digitadas da barra de pesquisa"
-
-#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear All"
 msgstr "Limpar Tudo"
 
 #. module: no_clear_all_filters
+#: model:ir.module.module,shortdesc:base.module_no_clear_all_filters
+msgid "Clear All Filters Button"
+msgstr "Botão Limpar Todos os Filtros"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,description:base.module_no_clear_all_filters
+msgid ""
+"Clear All Filters Button adds a single button next to the search bar that "
+"removes all active filters, group-bys, favorites, and typed queries in one "
+"click. Uses Odoo's native searchModel API. Pure frontend, zero server "
+"impact, no configuration."
+msgstr ""
+"Botão Limpar Todos os Filtros adiciona um único botão ao lado da barra de "
+"pesquisa que remove todos os filtros, agrupamentos, favoritos e consultas "
+"digitadas em um clique. Usa a API nativa searchModel do Odoo. Frontend puro,"
+" sem impacto no servidor, sem configuração."
+
+#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear all active filters, group-bys, and favorites"
 msgstr "Limpar todos os filtros, agrupamentos e favoritos ativos"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,summary:base.module_no_clear_all_filters
+msgid ""
+"One-click button to clear all active filters, group-bys, favorites, and "
+"typed queries from the search bar"
+msgstr ""
+"Botão de um clique para limpar todos os filtros, agrupamentos, favoritos e "
+"consultas digitadas da barra de pesquisa"

@@ -17,36 +17,36 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: no_clear_all_filters
-#: model:ir.module.module,description:no_clear_all_filters.module_meta_information
-msgid ""
-"Clear All Filters Button adds a single button next to the search bar t"
-"hat removes all active filters, group-bys, favorites, and typed querie"
-"s in one click. Uses Odoo's native searchModel API. Pure frontend, zer"
-"o server impact, no configuration."
-msgstr ""
-"清除所有筛选按钮在搜索栏旁添加一个按钮,一键删除所有活动筛选器、分组、收藏夹和输入的查询。使用 Odoo 原生 searchModel AP"
-"I。纯前端,无服务器影响,无需配置。"
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,shortdesc:no_clear_all_filters.module_meta_information
-msgid "Clear All Filters Button"
-msgstr "清除所有筛选按钮"
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,summary:no_clear_all_filters.module_meta_information
-msgid ""
-"One-click button to clear all active filters, group-bys, favorites, an"
-"d typed queries from the search bar"
-msgstr "一键清除搜索栏中所有活动筛选器、分组、收藏夹和输入查询的按钮"
-
-#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear All"
 msgstr "全部清除"
 
 #. module: no_clear_all_filters
+#: model:ir.module.module,shortdesc:base.module_no_clear_all_filters
+msgid "Clear All Filters Button"
+msgstr "清除所有筛选按钮"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,description:base.module_no_clear_all_filters
+msgid ""
+"Clear All Filters Button adds a single button next to the search bar that "
+"removes all active filters, group-bys, favorites, and typed queries in one "
+"click. Uses Odoo's native searchModel API. Pure frontend, zero server "
+"impact, no configuration."
+msgstr ""
+"清除所有筛选按钮在搜索栏旁添加一个按钮,一键删除所有活动筛选器、分组、收藏夹和输入的查询。使用 Odoo 原生 searchModel "
+"API。纯前端,无服务器影响,无需配置。"
+
+#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear all active filters, group-bys, and favorites"
 msgstr "清除所有活动筛选器、分组和收藏夹"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,summary:base.module_no_clear_all_filters
+msgid ""
+"One-click button to clear all active filters, group-bys, favorites, and "
+"typed queries from the search bar"
+msgstr "一键清除搜索栏中所有活动筛选器、分组、收藏夹和输入查询的按钮"

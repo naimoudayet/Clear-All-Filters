@@ -17,41 +17,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: no_clear_all_filters
-#: model:ir.module.module,description:no_clear_all_filters.module_meta_information
-msgid ""
-"Clear All Filters Button adds a single button next to the search bar t"
-"hat removes all active filters, group-bys, favorites, and typed querie"
-"s in one click. Uses Odoo's native searchModel API. Pure frontend, zer"
-"o server impact, no configuration."
-msgstr ""
-"Alle Filter Löschen Schaltfläche fügt eine einzelne Schaltfläche neben"
-" der Suchleiste hinzu, die alle aktiven Filter, Gruppierungen, Favorit"
-"en und eingegebenen Abfragen mit einem Klick entfernt. Verwendet die n"
-"ative searchModel-API von Odoo. Reines Frontend, kein Server-Aufwand, "
-"keine Konfiguration."
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,shortdesc:no_clear_all_filters.module_meta_information
-msgid "Clear All Filters Button"
-msgstr "Alle Filter Löschen Schaltfläche"
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,summary:no_clear_all_filters.module_meta_information
-msgid ""
-"One-click button to clear all active filters, group-bys, favorites, an"
-"d typed queries from the search bar"
-msgstr ""
-"Schaltfläche mit einem Klick, um alle aktiven Filter, Gruppierungen, F"
-"avoriten und eingegebenen Abfragen aus der Suchleiste zu löschen"
-
-#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear All"
 msgstr "Alles Löschen"
 
 #. module: no_clear_all_filters
+#: model:ir.module.module,shortdesc:base.module_no_clear_all_filters
+msgid "Clear All Filters Button"
+msgstr "Alle Filter Löschen Schaltfläche"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,description:base.module_no_clear_all_filters
+msgid ""
+"Clear All Filters Button adds a single button next to the search bar that "
+"removes all active filters, group-bys, favorites, and typed queries in one "
+"click. Uses Odoo's native searchModel API. Pure frontend, zero server "
+"impact, no configuration."
+msgstr ""
+"Alle Filter Löschen Schaltfläche fügt eine einzelne Schaltfläche neben der "
+"Suchleiste hinzu, die alle aktiven Filter, Gruppierungen, Favoriten und "
+"eingegebenen Abfragen mit einem Klick entfernt. Verwendet die native "
+"searchModel-API von Odoo. Reines Frontend, kein Server-Aufwand, keine "
+"Konfiguration."
+
+#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear all active filters, group-bys, and favorites"
 msgstr "Alle aktiven Filter, Gruppierungen und Favoriten löschen"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,summary:base.module_no_clear_all_filters
+msgid ""
+"One-click button to clear all active filters, group-bys, favorites, and "
+"typed queries from the search bar"
+msgstr ""
+"Schaltfläche mit einem Klick, um alle aktiven Filter, Gruppierungen, "
+"Favoriten und eingegebenen Abfragen aus der Suchleiste zu löschen"

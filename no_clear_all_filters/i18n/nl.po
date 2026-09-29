@@ -17,40 +17,40 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: no_clear_all_filters
-#: model:ir.module.module,description:no_clear_all_filters.module_meta_information
-msgid ""
-"Clear All Filters Button adds a single button next to the search bar t"
-"hat removes all active filters, group-bys, favorites, and typed querie"
-"s in one click. Uses Odoo's native searchModel API. Pure frontend, zer"
-"o server impact, no configuration."
-msgstr ""
-"Knop Alle Filters Wissen voegt een enkele knop toe naast de zoekbalk d"
-"ie alle actieve filters, groeperingen, favorieten en getypte zoekopdra"
-"chten in één klik verwijdert. Gebruikt de native searchModel-API van O"
-"doo. Pure frontend, geen serverbelasting, geen configuratie."
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,shortdesc:no_clear_all_filters.module_meta_information
-msgid "Clear All Filters Button"
-msgstr "Knop Alle Filters Wissen"
-
-#. module: no_clear_all_filters
-#: model:ir.module.module,summary:no_clear_all_filters.module_meta_information
-msgid ""
-"One-click button to clear all active filters, group-bys, favorites, an"
-"d typed queries from the search bar"
-msgstr ""
-"Eén-klik knop om alle actieve filters, groeperingen, favorieten en get"
-"ypte zoekopdrachten uit de zoekbalk te wissen"
-
-#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear All"
 msgstr "Alles Wissen"
 
 #. module: no_clear_all_filters
+#: model:ir.module.module,shortdesc:base.module_no_clear_all_filters
+msgid "Clear All Filters Button"
+msgstr "Knop Alle Filters Wissen"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,description:base.module_no_clear_all_filters
+msgid ""
+"Clear All Filters Button adds a single button next to the search bar that "
+"removes all active filters, group-bys, favorites, and typed queries in one "
+"click. Uses Odoo's native searchModel API. Pure frontend, zero server "
+"impact, no configuration."
+msgstr ""
+"Knop Alle Filters Wissen voegt een enkele knop toe naast de zoekbalk die "
+"alle actieve filters, groeperingen, favorieten en getypte zoekopdrachten in "
+"één klik verwijdert. Gebruikt de native searchModel-API van Odoo. Pure "
+"frontend, geen serverbelasting, geen configuratie."
+
+#. module: no_clear_all_filters
 #. odoo-javascript
 #: code:addons/no_clear_all_filters/static/src/xml/clear_filters.xml:0
 msgid "Clear all active filters, group-bys, and favorites"
 msgstr "Alle actieve filters, groeperingen en favorieten wissen"
+
+#. module: no_clear_all_filters
+#: model:ir.module.module,summary:base.module_no_clear_all_filters
+msgid ""
+"One-click button to clear all active filters, group-bys, favorites, and "
+"typed queries from the search bar"
+msgstr ""
+"Eén-klik knop om alle actieve filters, groeperingen, favorieten en getypte "
+"zoekopdrachten uit de zoekbalk te wissen"

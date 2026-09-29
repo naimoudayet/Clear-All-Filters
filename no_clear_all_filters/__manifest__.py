@@ -4,9 +4,9 @@
     "name": "Clear All Filters Button",
     "summary": "One-click button to clear all active filters, group-bys, favorites, and typed queries from the search bar",
     "description": "Clear All Filters Button adds a single button next to the search bar that "
-                   "removes all active filters, group-bys, favorites, and typed queries in one click. "
-                   "Uses Odoo's native searchModel API. Pure frontend, zero server impact, no configuration.",
-    "version": "19.0.1.2.1",
+    "removes all active filters, group-bys, favorites, and typed queries in one click. "
+    "Uses Odoo's native searchModel API. Pure frontend, zero server impact, no configuration.",
+    "version": "20.0.1.2.1",
     "category": "Extra Tools",
     "website": "https://www.oudayet.com",
     "author": "Naim OUDAYET",

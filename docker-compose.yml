@@ -1,38 +1,38 @@
-name: clearfilters-19
+name: clearfilters-20
 
 services:
-  db19:
-    image: postgres:16
-    container_name: clearfilters-pg-19
-    environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: odoo
-      POSTGRES_PASSWORD: odoo
-      PGDATA: /var/lib/postgresql/data/pgdata
-    ports:
-      - "7419:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/pgdata
-    restart: unless-stopped
+    db20:
+        image: postgres:16
+        container_name: clearfilters-pg-20
+        environment:
+            POSTGRES_DB: postgres
+            POSTGRES_USER: odoo
+            POSTGRES_PASSWORD: odoo
+            PGDATA: /var/lib/postgresql/data/pgdata
+        ports:
+            - "7420:5432"
+        volumes:
+            - postgres_data:/var/lib/postgresql/data/pgdata
+        restart: unless-stopped
 
-  odoo19:
-    build: .
-    container_name: clearfilters-odoo-19
-    depends_on:
-      - db19
-    ports:
-      - "10419:8069"
-    environment:
-      HOST: db19
-      USER: odoo
-      PASSWORD: odoo
-      PYTHONDONTWRITEBYTECODE: "1"   # else the bind mount fills the tree with __pycache__
-    volumes:
-      - odoo_data:/var/lib/odoo
-      - ./config:/etc/odoo
-      - ./no_clear_all_filters:/mnt/extra-addons/no_clear_all_filters
-    restart: unless-stopped
+    odoo20:
+        build: .
+        container_name: clearfilters-odoo-20
+        depends_on:
+            - db20
+        ports:
+            - "10420:8069"
+        environment:
+            HOST: db20
+            USER: odoo
+            PASSWORD: odoo
+            PYTHONDONTWRITEBYTECODE: "1" # else the bind mount fills the tree with __pycache__
+        volumes:
+            - odoo_data:/var/lib/odoo
+            - ./config:/etc/odoo
+            - ./no_clear_all_filters:/mnt/extra-addons/no_clear_all_filters
+        restart: unless-stopped
 
 volumes:
-  postgres_data:
-  odoo_data:
+    postgres_data:
+    odoo_data:

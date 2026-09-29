@@ -21,7 +21,7 @@ describe("no_clear_all_filters / hasActiveFilters", () => {
             hasActiveFilters({
                 facets: [{ groupId: 1 }],
                 query: [{ value: "abc" }],
-            })
+            }),
         ).toBe(true);
     });
     test("returns false when searchModel is null", () => {
@@ -41,7 +41,7 @@ describe("no_clear_all_filters / hasActiveFilters", () => {
             hasActiveFilters({
                 facets: [{ groupId: 1 }, { groupId: 2 }, { groupId: 3 }],
                 query: [],
-            })
+            }),
         ).toBe(true);
     });
 });

@@ -1,6 +1,6 @@
 # Manual Test Scenarios -- Clear All Filters Button
 
-Dev stack: `docker-compose up -d`, then open <http://localhost:10419> and use database `clear19`.
+Dev stack: `docker-compose up -d`, then open <http://localhost:10420> and use database `clear20`.
 Any list or kanban view with a search bar will do; the examples use **Contacts**.
 
 ## 1. The button only appears when there is something to clear

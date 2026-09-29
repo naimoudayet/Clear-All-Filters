@@ -1,9 +1,16 @@
 # Changelog
 
-All notable changes to **Clear All Filters Button** for Odoo 19.0 are documented here.
+All notable changes to **Clear All Filters Button** for Odoo 20.0 are documented here.
 
 This file follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format.
 Versions use Odoo's `<odoo_version>.<module_major>.<module_minor>.<module_patch>` scheme.
+
+## [20.0.1.2.1] - 2026-09-29
+
+### Changed
+- Ported to Odoo 20 (official `odoo:20` image; full test suite passes). The
+  button's icon uses Odoo 20's icon set; the Font Awesome icon it had does not
+  exist on Odoo 20.
 
 ## [19.0.1.2.1] - 2026-06-02
 

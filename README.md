@@ -1,9 +1,9 @@
-# Clear All Filters Button — Odoo 19
+# Clear All Filters Button — Odoo 20
 
 ![License](https://img.shields.io/badge/license-LGPL--3-blue)
-![Odoo](https://img.shields.io/badge/Odoo-19.0-blueviolet)
+![Odoo](https://img.shields.io/badge/Odoo-20.0-blueviolet)
 ![Languages](https://img.shields.io/badge/languages-9-orange)
-![Version](https://img.shields.io/badge/version-19.0.1.2.1-informational)
+![Version](https://img.shields.io/badge/version-20.0.1.2.1-informational)
 
 One-click button to wipe every active filter, group-by, favorite, and typed query from the search bar. Pure frontend OWL patch on the standard `SearchBar` component. Zero configuration, zero server impact.
 
@@ -29,8 +29,8 @@ One-click button to wipe every active filter, group-by, favorite, and typed quer
 
 | Item                 | Value                                                       |
 |----------------------|-------------------------------------------------------------|
-| Odoo Version         | 19.0                                                        |
-| Module Version      | 19.0.1.2.1                                                  |
+| Odoo Version         | 20.0                                                        |
+| Module Version      | 20.0.1.2.1                                                  |
 | License              | LGPL-3                                                      |
 | Dependencies         | `web`                                                       |
 | Python Dependencies  | None                                                        |
@@ -54,15 +54,15 @@ None. Once installed, the button appears next to the search bar on every view th
 docker-compose up -d
 ```
 
-- Odoo: http://localhost:10419
-- PostgreSQL: internal `db19` service (port `7419` exposed for tooling)
+- Odoo: http://localhost:10420
+- PostgreSQL: internal `db20` service (port `7420` exposed for tooling)
 
 The provided `Dockerfile` installs Chromium and `python3-websocket` so Odoo's `HttpCase.browser_js` can run the JS test suite headlessly.
 
 ## Running Tests
 
 ```bash
-docker exec -it clearfilters-odoo-19 \
+docker exec -it clearfilters-odoo-20 \
   odoo --test-enable --stop-after-init \
   -d test_db -i no_clear_all_filters \
   --test-tags no_clear_all_filters_js
@@ -88,8 +88,8 @@ Translations are loaded automatically when the matching language is active in Od
 
 ## Compatibility
 
-- Odoo 19.0 Community
-- Odoo 19.0 Enterprise
+- Odoo 20.0 Community
+- Odoo 20.0 Enterprise
 - Works with every view that uses Odoo's standard search bar (list, kanban, pivot, graph, calendar, activity, custom views)
 
 ## Author

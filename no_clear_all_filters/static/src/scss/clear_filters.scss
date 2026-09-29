@@ -1,7 +1,7 @@
 // Copyright 2026 Naim OUDAYET
 // License LGPL-3
 //
-// Odoo 19 keeps v18's .o_cp_searchview = Bootstrap .input-group root.
+// Odoo 20 keeps .o_cp_searchview as the Bootstrap .input-group root (now a rounded pill).
 // Inside it: an OWL <Dropdown> wraps .o_searchview (.form-control,
 // .border-end-0) for the autocomplete suggestions, and a
 // <SearchBarMenu> dropdown toggler is joined flush as the right-side
@@ -16,7 +16,7 @@
 //
 // Responsive: the "Clear All" label is wrapped in a <span> with
 // `d-none d-md-inline` in the XML, so it collapses to icon-only on
-// < md viewports (matches v19's view-switcher / breadcrumb collapse
+// < md viewports (matches the core view-switcher / breadcrumb collapse
 // pattern). flex: 0 0 auto stops the button from competing with the
 // .form-control sibling for flex growth.
 
